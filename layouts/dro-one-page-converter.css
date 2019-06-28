@@ -1,0 +1,295 @@
+/*
+ * Theme Name: dro one page converter
+ *
+ * Layout: dro-one-page-converter-one-page
+ *
+ * The CSS stylesheet for the Front Page.
+ * The <body> has a class "dro-one-page-converter-one-page"( Filter body_class  in inc/template-functions.php),
+ * so we use it to prevent overriding the default elements style.
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+# Elements
+# Forms
+# Header (  & logo )
+# Navigation
+        ## Links
+        ## Menus
+
+# Footer
+# Accessibility
+# Media
+        ## Captions
+        ## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+body.dro-one-page-converter-one-page{ 
+
+}
+
+body.dro-one-page-converter-one-page .col-12{
+    padding: 0;
+}
+body.dro-one-page-converter-one-page .content-area {
+    background: #fff;
+    background: hsl(0, 0%, 100%);
+}
+body.dro-one-page-converter-one-page section.element{
+    min-height: calc(100vh - 50px);
+    padding: 2rem 0;
+    margin: 0 ;
+    text-align: center;
+    /*background-color: #f5f5f5;*/
+    /*margin: 0 0 2rem 0;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+}
+body.dro-one-page-converter-one-page section.element .trans{
+    position: absolute;
+    background-color:rgba(29, 29, 29, 0.5); 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+body.dro-one-page-converter-one-page  div.entry-content{
+    color: #fff;
+}
+body.dro-one-page-converter-one-page .entry-content.entry-content-has-child{
+    color: #747474;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 50%;
+    padding: 0;
+}
+body.dro-one-page-converter-one-page  h1.section-title{
+    font-size: 2.5rem;
+    color: #fff;
+}
+/**
+* Section has not thumbnail
+*/
+body.dro-one-page-converter-one-page section.element.has-not-thumbnail{
+
+    background: linear-gradient(to bottom, #e1a200 0%, #c89001 100%);
+}
+body.dro-one-page-converter-one-page section.element.has-not-thumbnail h1.section-title{
+    color: hsl(2, 66%, 37%);
+}
+body.dro-one-page-converter-one-page section.element.has-not-thumbnail div.entry-content{
+    color: hsl(0, 98%, 17%);
+}
+
+/**
+* Section pages child
+*/
+.page-has-child{
+    /*    background: linear-gradient(to bottom,  #144566 0%,#242b33 100%);*/
+}
+body.dro-one-page-converter-one-page .child-element-wrapper{
+    background: hsl(38, 74%, 36%);
+    padding: 2rem;
+    min-height: 100%; 
+    border-radius: 10%;
+}
+body.dro-one-page-converter-one-page .child-element{
+    margin: 2rem 0;
+}
+
+body.dro-one-page-converter-one-page .child-element div.entry-content{
+    margin: .5rem 0 0;
+}
+body.dro-one-page-converter-one-page h1.section-title-has-child{
+    text-align: center;
+    color: #9d2420;
+}
+body.dro-one-page-converter-one-page .child-element h1.entry-title{
+    font-size: 1.5em;
+    margin: 0;
+    color: #fff;
+}
+body.dro-one-page-converter-one-page .child-element img{
+    border: 3px solid #fff;
+    border-radius: 50%;
+    max-width: 200px;
+}
+body.dro-one-page-converter-one-page .read-more{
+    color: #b5b5b5;
+    font-size: 1.5rem;    
+}
+@media screen and (min-width:768px){
+
+}
+@media screen and (min-width: 992px){
+    body.dro-one-page-converter-one-page section.element{
+        padding: 5rem 0;
+    }
+    body.dro-one-page-converter-one-page section.element{
+        background-attachment: fixed;
+    }
+    body.dro-one-page-converter-one-page  h1.section-title{
+        font-size: 4rem;
+        margin: 0;
+        padding: 2rem;
+    }
+    body.dro-one-page-converter-one-page h1.section-title-has-child{
+
+        margin-bottom: 2rem;
+        padding: 0;
+        color: #9d2420;
+    }
+    body.dro-one-page-converter-one-page .entry-content-has-child{
+        text-align: center;
+        /* border: 1px solid; */
+        padding: 0 0 4rem 0;
+        /* margin: 4rem -4rem 0 -2rem; */
+    }
+    body.dro-one-page-converter-one-page .children-pages{
+        padding: 0 4rem; 
+    }
+    body.dro-one-page-converter-one-page .child-element{
+        margin: 0 0 2rem 0;
+    }
+    body.dro-one-page-converter-one-page .child-element div.entry-content{
+        text-align: left;
+        margin: 0 auto;
+    }
+    body.dro-one-page-converter-one-page .child-element h1.entry-title{
+        text-align: center;
+        margin: 0 auto;
+        color: #fff;
+        padding: 0 0 1rem 0;
+    }
+    body.dro-one-page-converter-one-page .child-element-wrapper .row{
+        padding: 1rem;
+    }
+    body.dro-one-page-converter-one-page .child-element-wrapper{
+
+    }
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Header (& logo )
+--------------------------------------------------------------*/
+#masthead{
+    min-height: 50px;
+}
+body.dro-one-page-converter-one-page .custom-logo-link{
+    /*border: 1px solid #f00;*/
+    display: inline-block;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    height:50px;
+    width: 50px;
+    transition: all 1s;
+    z-index: 99999;   
+}
+@media screen and (min-width: 786px){
+    body.dro-one-page-converter-one-page .custom-logo-link{
+    height: 100px;
+    width: 100px;
+    left: 50px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@media screen and (min-width: 768px){
+    #toggle-menu-container {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 992px){
+    body.dro-one-page-converter-one-page .navbar{
+        padding: 0;
+    }
+    body.dro-one-page-converter-one-page .navbar-inner{
+        background: #fff;
+        background-color: #222;
+        filter: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+    body.dro-one-page-converter-one-page .navbar .brand {
+        padding: 15px 0;
+        margin-left: 0;
+    }
+    body.dro-one-page-converter-one-page .front-page-navigation{
+        /*position: relative;*/
+        background-color: #222;
+        width: 100%;
+        height: 50px;
+        float: left;
+        clear: both;
+    }
+    body.dro-one-page-converter-one-page ul.menu{
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+    }
+    body.dro-one-page-converter-one-page ul.menu li{
+        display: inline;
+        float: right;
+        height: 50px;
+    }
+    body.dro-one-page-converter-one-page ul.menu li a{
+        color: #fdb84e;
+        display: block;
+        padding: 1em .8em;
+        /*border: 1px solid #f00;*/
+        text-decoration: none;
+        text-transform: uppercase;
+        min-height: 50px;
+    }
+    body.dro-one-page-converter-one-page ul.menu li a:hover{
+        background-color: #7ac1b7;
+        color: #fff;
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+body.dro-one-page-converter-one-page .site-footer{
+    background-color: hsl(0, 0%, 10%);
+    border-top: 1px solid hsl(200, 4%, 17%);
+    /* height: 100px; */
+    padding: 20px 0 20px 0;
+    
+}
+body.dro-one-page-converter-one-page .site-info{
+    /* background-color: #ccc; */
+    color: #fff;
+    font-size: .9rem;
+}
+body.dro-one-page-converter-one-page .site-info a{
+    color: #bebebe;
+}
