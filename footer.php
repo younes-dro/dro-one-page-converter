@@ -10,6 +10,9 @@
  */
 ?>
 
+</div><!-- .row -->
+</div><!-- .container-fluid -->
+
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer">

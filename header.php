@@ -77,5 +77,6 @@
                 </div><!-- .col-12.header-container-->
                 </div><!-- .row -->
                 <div id="content" class="site-content">
+                    <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        

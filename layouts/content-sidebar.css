@@ -1,0 +1,28 @@
+/*
+ * Theme Name: dro one page converter
+ *
+ * Layout: Content-Sidebar
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+.content-area {
+
+}
+.site-main {
+
+}
+.site-content{
+    padding: 70px 0;
+}
+.site-content .widget-area {
+
+}
+.site-footer {
+
+}
+
+.no-sidebar .content-area {
+}
+.no-sidebar .site-main {
+}

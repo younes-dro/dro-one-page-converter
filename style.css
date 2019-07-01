@@ -37,6 +37,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Content
         ## Posts and pages
         ## Comments
+        ## Index and Archive
 # Infinite scroll
 # Media
         ## Captions
@@ -631,11 +632,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-    color: royalblue;
+    text-decoration: none;	
+    color: #000;
+    color: hsl(0, 0%, 0%);
 }
 
 a:visited {
-    color: purple;
+    color: #333;
+    color: hsl(0, 0%, 20%);
 }
 
 a:hover, a:focus, a:active {
@@ -950,8 +954,7 @@ div.col-12.header-container{
 }
 p.site-title,
 h1.site-title{
-    font-family: 'hotpizza';
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0 auto;
     padding: 0;
 }
@@ -1053,13 +1056,164 @@ p.site-description{
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.entry-header{
+    /*border:1px solid #00F;*/
+}
+/* Align center the entry header content for Single post */
+.posted_category, 
+.entry-title,
+.entry-meta{
+    text-align: center;
+}
+.entry-title {
+    margin: 0 0 2rem;
+
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+.entry-meta {
+    margin-bottom: 2rem;
+    padding: 0;
+    font-family: 'Coourgette-Regular', sans-serif;
+    font-size: 14px;
+    font-size: .9rem;
+}
+
+.entry-meta a { font-weight: 600; }
+.entry-content a { 
+    text-decoration: underline; 
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 { margin-bottom: .4em; }
+
+
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.6em;
+}
+
+.entry-content blockquote p {
+    font-size: 20px;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+/* Smaller fonts for smaller screens */
+@media screen and (max-width: 767px) {
+
+    /*    h1{font-size: 2rem;font-weight: 500;}
+        h2{font-size:1.75rem; font-weight: 500}
+        h3{font-size:1.5rem ; font-weight: 500;}
+        h4{font-size:1.25rem; font-weight: 500;}
+        h5{font-size:1.15rem; font-weight: 500}
+        h6{font-size:1rem; font-weight: 500}*/
+    .entry-content p,
+    .entry-content ul,
+    .entry-content ol  {
+        font-size: 18px;
+        font-size: 1rem;
+    }
+
+    .entry-content blockquote p {
+        font-size: 22px;
+        font-size: 1rem;
+        line-height: 1.5em;
+    }
+}
+/* Meta */
+.category-list {
+    margin: 1.3em 0 1em;
+    font-family: 'Coourgette-Regular', sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.category-list a {
+    color: #333;
+    color: hsl(0, 0%, 10%);
+}
+
+.category-list a:hover {
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+.cat-links i{
+    padding: .3rem;
+    color: #ccc;
+}
+
+.entry-footer {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    font-family: 'Coourgette-Regular', sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2em;
+}
+
+.entry-footer ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.entry-footer li {
+    display: inline-block;
+    margin-right: 4rem;
+}
+
+.tags-links{
+    font-size: 13px;
+    font-size: .9rem;
+    text-align: center;
+    display: block;
+}
+.tags-links .fa{
+    /*color: #ccc;*/
+}
+
+.entry-footer .tags-links a {
+    margin-left: .4rem;
+    border-radius: 50%;
+    background-color: #313131;
+    padding: 4px 8px;
+    color: #fff;
+    text-decoration: none;
+    font-family: FontAwesome;
+    display: inline-block;
+}
+.tags-links a::before{
+    margin-right: .1rem;
+    content: '\f02b';
+}
+.entry-footer a:hover{
+    /*background-color: #fff;*/
+    color: #848d95;
+}
+
+/* blockquote */
+blockquote{
+    border-top: 1px solid #bbc0c4;
+    border-bottom: 1px solid #bbc0c4;
+    font-style: italic;
+    padding: 1em 1.5em 0;
+    margin-bottom: 1em;
+}
 
 .sticky {
     display: block;
 }
 
 .hentry {
-    margin: 0 0 1.5em;
+    /*    margin: 0 0 1.5em;
+        padding: 1em;*/
 }
 
 .updated:not(.published) {
@@ -1077,6 +1231,22 @@ p.site-description{
     margin: 0 0 1.5em;
 }
 
+.posted-on{
+    /*   display: inline-block;
+       margin-left: 1rem;*/
+}
+.posted-on i{
+    padding: .3rem;
+    color: #ccc;
+}
+.byline{
+    display: inline-block;
+    margin-right: .5rem;
+}
+.byline i {
+    padding: .3rem;
+    color: #ccc;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1087,7 +1257,76 @@ p.site-description{
 .bypostauthor {
     display: block;
 }
+/*--------------------------------------------------------------
+## Index and Archive
+--------------------------------------------------------------*/
+.post-item{
+    margin-bottom: 60px;
+}
+.article-inner-wrapper{
+    padding: 30px 30px 0px;
+    text-align: center;
+    border: 1px solid #9E9E9E;
+}
+@media screen and (max-width:992px){
 
+    .post-item .entry-meta span{
+        display: block;   
+    }
+}
+.continue-reading{
+    margin: 0 auto;
+    background-color: #000;
+    display: inline-block;
+}
+.continue-reading a{
+    color: #fff;
+    font-size: .9rem;
+    display: inline-block;
+    padding: .3rem;
+}
+.continue-reading i{
+    margin-left: .5rem;
+}
+.post-sticky{
+    position: absolute;
+    top: .1rem;
+    left: 1.5rem;
+    transform: rotateZ(-45deg);
+    color: #000000;
+}
+/* Archive style */
+.page-header{
+
+}
+.page-title{
+    background-color: #4d4d4d;
+    color: #fff;
+    padding: 1rem;
+}
+.archive-description{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 0 0 0 1rem;
+    margin: 0 0 1rem 0;
+    display: table;
+    width: 100%;
+}
+.archive-description p{
+    display: table-cell;
+    vertical-align: middle;
+}
+@media screen and (max-width: 768px){
+
+    .page-title{
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    .entry-title{
+        font-size: 18px;
+        font-size: 1.5rem;
+    }
+}
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

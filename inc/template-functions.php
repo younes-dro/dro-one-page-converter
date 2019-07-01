@@ -35,6 +35,28 @@ if (!function_exists('dro_one_page_converter_body_classes')) {
 }
 add_filter('body_class', 'dro_one_page_converter_body_classes');
 
+if (!function_exists('dro_web_trader_article_classes')):
+
+    /**
+     * Add custom classes to the <article>
+     * 
+     * @param array $classes Classes for the article element
+     * @return array 
+     */
+    function dro_one_page_converter_article_classes($classes) {
+        if (is_single()) {
+            $classes[] = 'row';
+        }
+        if(is_front_page() || is_archive() || is_search()){
+            $classes[] = 'post-item';
+        }
+
+        return $classes;
+    }
+
+endif;
+add_filter('post_class', 'dro_one_page_converter_article_classes');
+
 if (!function_exists('dro_one_page_converter_pingback_header')) {
 
     /**

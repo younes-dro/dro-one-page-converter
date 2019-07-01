@@ -36,6 +36,11 @@ Bootstrap, Copyright 2011-2018 Twitter
 License: MIT
 Source: https://getbootstrap.com/
 
+Font Awesome icons, Copyright Dave Gandy
+Icons License: CC BY 4.0 
+Fonts License: SIL OFL 1.1 
+Source: http://fontawesome.io/
+
 Ionicons v2.0.0,  Created by Ben Sperry for the Ionic Framework
 License : MIT
 Source  :  http://ionicons.com/

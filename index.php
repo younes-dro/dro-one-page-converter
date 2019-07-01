@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-<div class="row">
+
     <?php
         if(dro_one_page_converter_sidebar_status('sidebar-right')){
             $col_count = 'col-md-9';
@@ -63,6 +63,6 @@ get_header();
 	</div><!-- #primary -->
     </div>
 <?php get_sidebar(); ?>
-</div><!-- .row -->        
+     
 <?php
 get_footer();
