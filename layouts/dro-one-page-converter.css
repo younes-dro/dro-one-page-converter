@@ -38,7 +38,9 @@
 body.dro-one-page-converter-one-page{ 
 
 }
-
+body.dro-one-page-converter-one-page .site-content{
+    padding: 0;
+}
 body.dro-one-page-converter-one-page .col-12{
     padding: 0;
 }

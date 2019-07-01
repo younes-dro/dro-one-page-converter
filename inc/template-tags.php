@@ -24,7 +24,7 @@ if (!function_exists('dro_one_page_converter_posted_on')) :
                 '%s', $time_string);
 
 
-        echo '<span class="posted-on">' . __('<i class="fa fa-calendar" aria-hidden="true"></i>', 'dro-web-trader') . $posted_on . '</span>'; // WPCS: XSS OK.
+        echo '<span class="posted-on">' . __('<i class="fa fa-calendar" aria-hidden="true"></i>', 'dro-one-page-converter') . $posted_on . '</span>'; // WPCS: XSS OK.
     }
 
 endif;
