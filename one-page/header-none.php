@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for the One Page
+ * The header for the One Page if no child pages was found
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -8,7 +8,7 @@
  *
  * @package dro_one_page_converter
  */
-global $dro_one_page_converter_frontpage;
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -31,12 +31,6 @@ global $dro_one_page_converter_frontpage;
                             <div class="navbar navbar-inverse ">
                                 <div class="navbar-inner">
                                     <nav id="site-navigation" class="main-navigation front-page-navigation sticky-active" role="navigation">
-                                        <?php
-                                        $menu_attributes = array(
-                                            'menu_class' => 'menu'
-                                        );
-                                        $dro_one_page_converter_frontpage->frontpage_nav_menu($menu_attributes);
-                                        ?>
                                     </nav><!-- #site-navigation -->
                                 </div>
                             </div>
@@ -46,3 +40,4 @@ global $dro_one_page_converter_frontpage;
                 <?php the_custom_logo() ?>
             </header><!-- #masthead -->
             <div id="content" class="site-content">
+    
