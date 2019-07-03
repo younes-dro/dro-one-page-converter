@@ -10,7 +10,7 @@ Tags:  custom-logo, custom-menu, featured-images, one-column, full-width-templat
 
 == Description ==
 
-Dro One Page Converter gives you the ability to convert your site to a single page theme in three steps: Firstly: create a page (or an existing page) and assign it to the template: "Dro OnePage Converter".  Secondly:  set it as FrontPage (Settings -> reading -> static page ). Thirdly: create a set of pages that you want to display on the home page (or already existing pages) and define them as child pages of the FrontPage.The menu is dynamically built and contains the titles of the child pages. If a child page also contains child pages too, they will be displayed in a responsive column. 
+Dro One Page Converter gives you the ability to convert your site to a single page theme in three steps: Firstly: create a page (or an existing page) and assign it to the template: "Dro OnePage Converter".  Secondly:  set it as FrontPage (Settings -> reading -> static page ). Thirdly: create a set of pages that you want to display on the home page (or already existing pages) and define them as child pages of the FrontPage.The menu is dynamically built and contains the titles of the child pages. If a child page also contains child pages too, they will be displayed in a responsive column. The content of child pages, is displayed before the Tag Read More.
 
 == Installation ==
 
@@ -53,11 +53,11 @@ Montserrat Font, Copyright 2011 The Montserrat Project Authors
 License : the SIL Open Font License, Version 1.1
 Source : https://github.com/JulietaUla/Montserrat
 
-Header image (assets/images/dro-one-page-converter-header) is under Creative Commons CC0 license.
+Header image (assets/images/dro-one-page-converter-header.png) is under Creative Commons CC0 license.
 License : https://stocksnap.io/license
 Soource: https://stocksnap.io/photo/3YELAUQN98
 
-The Logo and The three images() in the screenshot, Copyright Younes DRO
+The Logo and The three images in the screenshot, Copyright Younes DRO
 License : MIT
 Source  : https://github.com/younes-dro/dro-illustration/tree/master/dro-one-page-converter 
 
