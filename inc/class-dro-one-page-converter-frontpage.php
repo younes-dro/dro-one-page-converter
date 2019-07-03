@@ -60,7 +60,7 @@ class dro_one_page_converter_frontpage {
      * 
      * @var string $content 
      */
-    private $content;
+    public $content;
 
     /**
      * Constructor
@@ -73,7 +73,6 @@ class dro_one_page_converter_frontpage {
         $this->_get_pages();
         $this->_has_child();
     }
-
 
     /**
      * Verfiy if the main page has a children pages or not
@@ -93,7 +92,8 @@ class dro_one_page_converter_frontpage {
     private function _get_pages() {
         $this->pages = get_pages(array(
             'child_of' => $this->parent_page,
-            'parent' => $this->parent_page
+            'parent' => $this->parent_page,
+            'post_status' => 'publish'
         ));
     }
 
@@ -129,9 +129,9 @@ class dro_one_page_converter_frontpage {
         $this->menu = '<ul class="' . $menu_class . '">';
         foreach ($pages as $key => $value) {
             $this->menu .='<li>';
-            $this->menu .='<a href="#' . $pages[$key]->post_name . '" title="' .
-                    $pages[$key]->post_title . '">' .
-                    $pages[$key]->post_title . '</a>';
+            $this->menu .='<a href="#' . esc_html__($pages[$key]->post_name, 'dro-one-page-converter') . '" title="' .
+                    esc_html__($pages[$key]->post_title, 'dro-one-page-converter') . '">' .
+                    esc_html__($pages[$key]->post_title, 'dro-one-page-converter') . '</a>';
             $this->menu .='</li>';
         }
         $this->menu .="</ul>";
@@ -140,7 +140,7 @@ class dro_one_page_converter_frontpage {
     }
 
     /**
-     * Display the navigation menu for the Front Page
+     * Display the navigation menu 
      * 
      * @param array $menu_attributes The menu parameters.
      */
@@ -150,25 +150,34 @@ class dro_one_page_converter_frontpage {
     }
 
     /**
-     * Display the content for the Front Page
+     * Retrieve all the content of the front page
+     * or false , if no child page was found
+     * 
+     * @return string|false The html output or false
      */
     public function frontpage_content() {
 
-        echo $this->_construct_content($this->pages);
+        if ($this->pages) {
+            $this->_construct_content($this->pages);
+            return $this->content;
+        } else {
+            return false;
+        }
     }
 
     /**
+     * Return the contents of the child pages,
      * 
      * @param array $pages
      * @return string
      */
     private function _construct_content(array $pages) {
 
+
         foreach ($pages as $page) {
 
-//            var_dump($value);
             /*
-             * Retrieve the featured image (if exists)  and set it as background of the section
+             * Retrieve the featured image (if exists)  and set it as background of the section.
              */
 
             $background = '';
@@ -187,12 +196,14 @@ class dro_one_page_converter_frontpage {
 
             // If the child page has a children too
             if ($this->_subpage_has_child($page->ID) > 0) {
-                $this->content .= '<section id="' . $page->post_name . '" class="element page-has-child" ' . $background . '>'
+                $this->content .= '<section id="' . esc_html__($page->post_name, 'dro-one-page-converter') . '" class="element page-has-child" ' . $background . '>'
                         . $trans
                         . '<div class="container-fluid">'
                         . '<div class="row">'
                         . '<div class="col-lg-12">'
-                        . '<h1 class="entry-title section-title section-title-has-child">' . $page->post_title . '</h1>'
+                        . '<h1 class="entry-title section-title section-title-has-child">'
+                        . esc_html__($page->post_title, 'dro-one-page-converter')
+                        . '</h1>'
                         . '<div class="entry-content entry-content-has-child">' . $content_parts['main'] . '</div>'
                         . $this->_more_tag_link($page->ID)
                         . '</div><!-- .col-lg-12-->'
@@ -205,14 +216,14 @@ class dro_one_page_converter_frontpage {
                         . '</div><!-- .content-fluid (parent) -->';
                 $this->content .='</section>';
             } else {
-                $this->content .= '<section id="' . $page->post_name . '" '
+                $this->content .= '<section id="' . esc_html__($page->post_name, 'dro-one-page-converter') . '" '
                         . 'class="element ' . $class_has_not_thumbnail . '"'
                         . $background . '>'
                         . $trans
                         . '<div class="container-fluid">'
                         . '<div class="row">'
                         . '<div class="col-lg-5">'
-                        . '<h1 class="entry-title section-title">' . $page->post_title . '</h1>'
+                        . '<h1 class="entry-title section-title">' . esc_html__($page->post_title, 'dro-one-page-converter') . '</h1>'
                         . '</div><!-- .col-lg-5 -->'
                         . '<div class="col-lg-7">'
                         . '<div class="entry-content">'
