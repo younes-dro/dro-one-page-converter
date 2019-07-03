@@ -129,9 +129,11 @@ class dro_one_page_converter_frontpage {
         $this->menu = '<ul class="' . $menu_class . '">';
         foreach ($pages as $key => $value) {
             $this->menu .='<li>';
-            $this->menu .='<a href="#' . esc_html__($pages[$key]->post_name, 'dro-one-page-converter') . '" title="' .
-                    esc_html__($pages[$key]->post_title, 'dro-one-page-converter') . '">' .
-                    esc_html__($pages[$key]->post_title, 'dro-one-page-converter') . '</a>';
+            $this->menu .='<a href="#' 
+                    . esc_html($pages[$key]->post_name) 
+                    . '" title="' .
+                    esc_html($pages[$key]->post_title) . '">' .
+                    esc_html($pages[$key]->post_title) . '</a>';
             $this->menu .='</li>';
         }
         $this->menu .="</ul>";
@@ -196,13 +198,13 @@ class dro_one_page_converter_frontpage {
 
             // If the child page has a children too
             if ($this->_subpage_has_child($page->ID) > 0) {
-                $this->content .= '<section id="' . esc_html__($page->post_name, 'dro-one-page-converter') . '" class="element page-has-child" ' . $background . '>'
+                $this->content .= '<section id="' . esc_html($page->post_name) . '" class="element page-has-child" ' . $background . '>'
                         . $trans
                         . '<div class="container-fluid">'
                         . '<div class="row">'
                         . '<div class="col-lg-12">'
                         . '<h1 class="entry-title section-title section-title-has-child">'
-                        . esc_html__($page->post_title, 'dro-one-page-converter')
+                        . esc_html($page->post_title)
                         . '</h1>'
                         . '<div class="entry-content entry-content-has-child">' . $content_parts['main'] . '</div>'
                         . $this->_more_tag_link($page->ID)
@@ -216,14 +218,14 @@ class dro_one_page_converter_frontpage {
                         . '</div><!-- .content-fluid (parent) -->';
                 $this->content .='</section>';
             } else {
-                $this->content .= '<section id="' . esc_html__($page->post_name, 'dro-one-page-converter') . '" '
+                $this->content .= '<section id="' . esc_html($page->post_name) . '" '
                         . 'class="element ' . $class_has_not_thumbnail . '"'
                         . $background . '>'
                         . $trans
                         . '<div class="container-fluid">'
                         . '<div class="row">'
                         . '<div class="col-lg-5">'
-                        . '<h1 class="entry-title section-title">' . esc_html__($page->post_title, 'dro-one-page-converter') . '</h1>'
+                        . '<h1 class="entry-title section-title">' . esc_html($page->post_title) . '</h1>'
                         . '</div><!-- .col-lg-5 -->'
                         . '<div class="col-lg-7">'
                         . '<div class="entry-content">'
@@ -249,7 +251,7 @@ class dro_one_page_converter_frontpage {
      */
     private function _more_tag_link($id) {
         return '<h2><a class="read-more" '
-                . 'title="' . esc_html__('Read More', 'dro-one-page-converter')
+                . 'title="' . esc_html('Read More', 'dro-one-page-converter')
                 . '" href="' . get_page_link($id) . '#post-' . $id . '">[...]</a></h2>';
     }
 
