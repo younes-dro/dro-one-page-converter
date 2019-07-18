@@ -143,7 +143,7 @@ function dro_one_page_converter_scripts() {
     wp_enqueue_style('dro-one-page-converter-ionicons', get_template_directory_uri() . '/assets/ionicons/css/ionicons.css');
     wp_enqueue_style('dro-one-page-converter-mobile-menu', get_template_directory_uri() . '/layouts/dro-sliding-menu.css');
     wp_enqueue_style('dro-one-page-converter-style', get_stylesheet_uri());
-    wp_enqueue_style('dro-one-page-converter-layoout-style', get_template_directory_uri().'/layouts/content-sidebar.css');
+    wp_enqueue_style('dro-one-page-converter-layoout-style', get_template_directory_uri() . '/layouts/content-sidebar.css');
     if (is_page_template()) {
         wp_enqueue_style('dro-one-page-converter-one-page-css', get_template_directory_uri() . '/layouts/dro-one-page-converter.css');
     }
@@ -230,12 +230,23 @@ add_filter('frontpage_template', 'dro_one_page_converter_front_page_template');
 /**
  * display a notice : how to use the theme
  */
-//add_action('admin_notices', 'dro_one_page_converter_notice');
-//
-//function dro_one_page_converter_notice() {
-//
-//    global $pagenow;
-//    if (is_admin() && $pagenow == 'themes.php') {
-//        echo '<div class="notice notice-info is-dismissible"><p> </p> </div>';
-//    }
-//}
+add_action('admin_notices', 'dro_one_page_converter_notice');
+
+function dro_one_page_converter_notice() {
+
+    global $pagenow;
+    $github_readme = esc_url('https://github.com/younes-dro/dro-one-page-converter');
+
+    if (is_admin() && $pagenow == 'themes.php') {
+        echo '<div class="notice notice-info is-dismissible"><p>';
+        printf(
+                esc_html__('Please visit this link %1s to understand how the conversion to OnePage works.', 'dro-one-page-converter')
+                , sprintf(
+                        '<a href="%s">%s</a>', $github_readme, esc_html__('README', 'dro-one-page-converter')
+                )
+        ); // WPCS: XSS OK.
+        
+        echo '</p></div>';
+    }
+}
+
