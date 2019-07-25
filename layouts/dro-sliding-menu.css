@@ -125,12 +125,12 @@ span.left{
 }
 #toggle-menu-container{
     position: absolute;
-    z-index: 9999;
+    z-index: 99999;
     right: 0;
     top: 0;
     width: 100%;
     height: 50px;
-    background: hsla(0, 0%, 0%, 1);
+    background: hsla(0, 0%, 0%, 0.60);
     transition: width 1s;
 }
 #toggle-menu{
@@ -205,13 +205,17 @@ span.left{
 
 }
 @media screen and (min-width:992px){
-
+    
+    #toggle-menu-container{
+        width: 50px;
+        background: transparent;
+    }
     .wp_mm_wrapper,
     #toggle-menu,
     .body_overlay,
     .body_overlay.enabled,
     #toggle-menu-container{
-        display: none;
+        /*display: none;*/
     }
     body.wp_mm_enable{
         overflow: visible;

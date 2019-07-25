@@ -680,7 +680,7 @@ a:hover, a:active {
 }
 .main-navigation {
     position: relative;
-    float: right;
+    float: left;
     width: 100%;
     display: none;
     clear: both;
@@ -718,7 +718,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-    width: 200px;
+    width: 150px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -727,15 +727,15 @@ a:hover, a:active {
 }
 
 .main-navigation li {
-    float: right;
+    float: left;
     position: relative;
 }
 
 .main-navigation a {
     display: block;
     padding: 1em .8em;
-    font-size: 14px;
-    /* font-size: 1rem; */
+    /*font-size: 14px;*/
+    font-size: .8rem; 
     text-decoration: none;
     line-height: 1.3em;
     color: #fdb84e;
@@ -1020,6 +1020,7 @@ p.site-description{
     .custom-logo-link{
         width: 150px;
         height: 150px;
+        top:50px;
     }
 }
 
