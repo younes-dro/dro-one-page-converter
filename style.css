@@ -29,6 +29,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Navigation
         ## Links
         ## Menus
+        ## Paginations
 # Accessibility
 # Alignments
 # Clearings
@@ -592,7 +593,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 3px;
-    
+
 }
 
 input[type="text"]:focus,
@@ -796,6 +797,124 @@ a:hover, a:active {
     float: right;
     text-align: right;
     width: 50%;
+}
+/*--------------------------------------------------------------
+## Pagination 
+--------------------------------------------------------------*/
+nav.pagination{
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.pagination .page-numbers.current {
+    background: #7ac1b7;
+    color: #fff;
+    border-color: #222;
+}
+.pagination .page-numbers {
+    display: block;
+    line-height: 45px;
+    padding: 0;
+    margin: 0 auto;
+    min-height: 45px;
+    border: 1px solid #000;
+    font-weight: 400;
+    background: rgba(158, 37, 32, 1);
+    color: #fdb84e;
+}
+.pagination .page-numbers:hover{
+    background-color: #7ac1b7;
+    color: #fff;
+}
+nav.pagination i{
+    /*color: #fdb84e;*/
+}
+
+@media screen and (min-width:767px){
+    .pagination .page-numbers {
+        display: inline-block;
+        line-height: 30px;
+        padding: 7px 17px;
+        margin-right: 5px;
+    }    
+}
+@media screen and (max-width:768px){
+    .pagination .page-numbers{
+        margin-bottom: .2rem;
+    }
+    .pagination a.page-numbers,
+    .pagination span.dots{
+        /*border: none;*/
+    }
+}
+/* Posts navigation */
+.site-main .comment-navigation, .site-main
+.post-navigation, .site-main
+.post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.post-navigation .nav-previous,
+.post-navigation .nav-previous {
+    width: 100%; 
+    text-align: center;
+    float: none;
+    background: rgba(158, 37, 32, 1);
+    color: #fdb84e;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin-top: 20px;
+    background: rgba(158, 37, 32, 1);
+    color: #fdb84e;
+
+}
+
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a,
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a{
+color: #fdb84e;
+    /* background-color: aliceblue; */
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 7px 10px;
+    font-size: .9rem;
+}
+.comment-navigation .nav-previous a:hover,
+.posts-navigation .nav-previous a:hover,
+.post-navigation .nav-previous a:hover,
+.comment-navigation .nav-next a:hover,
+.posts-navigation .nav-next a:hover,
+.post-navigation .nav-next a:hover{
+    background-color: #7ac1b7;
+    color: #fff;
+}
+@media screen and (min-width: 768px){
+    .comment-navigation .nav-previous,
+    .post-navigation .nav-previous,
+    .post-navigation .nav-previous {
+        float: left;
+        padding: 0;
+        width: auto;
+    }
+
+    .comment-navigation .nav-next,
+    .posts-navigation .nav-next,
+    .post-navigation .nav-next {
+        float: right;
+        padding: 0;
+        width: auto;
+    }
 }
 /*--------------------------------------------------------------
 # Footer
@@ -1158,7 +1277,22 @@ p.site-description{
     font-size: 1.6rem;
     line-height: 2em;
 }
-
+.entry-footer span.cat-links{
+    display: block;
+    margin: 4px auto;
+    color: #7b7f84;
+    font-size: 1.3rem;
+}
+.entry-footer span.cat-links .posted-in{
+    color: #7b7f84;
+    font-size: 1.3rem;
+}
+.entry-footer span.cat-links a{
+    font-size: 1rem;
+    font-weight: normal;
+    color: #232323;
+    font-family: cursive;
+}
 .entry-footer ul {
     padding: 0;
     margin: 0;
@@ -1259,6 +1393,111 @@ blockquote{
     display: block;
 }
 /*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comments-title {
+    font-weight: 700;
+}
+.comments-area > ol {
+    padding: 0;
+    margin: 2em 0;
+    list-style-type: none;
+}
+ol.children { list-style-type: none; }
+.comment-list ol { margin-left: 50px; }
+.comment-meta { margin-bottom: 1em; }
+.comment-author .avatar {
+    width: 50px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+
+.comment-author .fn {
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+.comment-metadata {
+
+    font-size:.8rem;
+}
+
+.comment-content { font-size: 90%; }
+
+.comment-content,
+.reply { margin-left: 3rem; }
+.comment-body {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: solid hsl(0, 0%, 80%) 1px;
+}
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.comment-content ol { margin-left: 1.5em; }
+
+.reply {
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.comment-body .reply a {
+    margin-top: 16px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1px;
+    background: #222;
+    padding: 0px 15px 0px 15px;
+    border: 1px solid #222;
+}
+.comment-body .reply a:hover{
+    border: 1px solid #bbc0c4;
+}
+.bypostauthor > .comment-body {
+    position: relative;
+    padding: 1em;
+    margin-bottom: 2em;
+    background: hsl(0, 0%, 93%);
+    border: none;
+}
+/* Form comments */
+.comment-reply-title {
+    margin-bottom: .5em;
+    font-weight: 700;
+}
+.comment-form {
+    padding-bottom: 4rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-size: 1.1rem;
+}
+
+.comment-form textarea {
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+    font-size: 1.2rem;
+}
+.comment-form label { display: block; }
+
+.required { color: red; }
+/* Comments responsive */
+@media screen and (max-width:600px) {    
+    .comment-list ol { margin-left: 0; }
+    ol.children{margin-left: 0; padding: 0}
+
+    .comment-content ol { margin-left: 1.5em; }
+
+    .comment-content,
+    .reply { margin-left: 0; }
+}
+/*--------------------------------------------------------------
 ## Index and Archive
 --------------------------------------------------------------*/
 .post-item{
@@ -1267,7 +1506,7 @@ blockquote{
 .article-inner-wrapper{
     padding: 30px 30px 0px;
     text-align: center;
-    border: 1px solid #9E9E9E;
+    /*border: 1px solid #9E9E9E;*/
 }
 @media screen and (max-width:992px){
 

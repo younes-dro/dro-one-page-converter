@@ -37,27 +37,14 @@
         <?php dro_one_page_converter_post_thumbnail(); ?>
 
         <div class="entry-content">
-            <?php
-            the_content(sprintf(
-                            wp_kses(
-                                    /* translators: %s: Name of current post. Only visible to screen readers */
-                                    __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'dro-one-page-converter'), array(
-                'span' => array(
-                    'class' => array(),
-                ),
-                                    )
-                            ), get_the_title()
-            ));
-
-            wp_link_pages(array(
-                'before' => '<div class="page-links">' . esc_html__('Pages:', 'dro-one-page-converter'),
-                'after' => '</div>',
-            ));
-            ?>
+            <?php the_excerpt() ?>
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
-<?php dro_one_page_converter_entry_footer(); ?>
+            <div class="continue-reading">
+                <?php echo '<a href="' . esc_url(get_permalink()) . '" title="' . esc_attr__('Continue Reading ', 'dro-one-page-converter') . get_the_title() . '" rel="bookmark">Continue Reading<i class="fa fa-arrow-circle-right"></i></a>'; ?>
+            </div>
+            <?php dro_one_page_converter_entry_footer(); ?>
         </footer><!-- .entry-footer -->
     </div><!-- .article-inner-wrapper -->
 </article><!-- #post-<?php the_ID(); ?> -->

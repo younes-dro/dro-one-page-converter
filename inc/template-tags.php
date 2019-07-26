@@ -57,14 +57,16 @@ if (!function_exists('dro_one_page_converter_entry_footer')) :
             $categories_list = get_the_category_list(esc_html__(', ', 'dro-one-page-converter'));
             if ($categories_list) {
                 /* translators: 1: list of categories. */
-                printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'dro-one-page-converter') . '</span>', $categories_list); // WPCS: XSS OK.
+                printf(
+                        '<span class="cat-links"><span class="posted-in">' . esc_html__('Posted in : ', 'dro-one-page-converter') . '</span>%1$s</span>', 
+                        $categories_list); // WPCS: XSS OK.
             }
 
-            /* translators: used between list items, there is a space after the comma */
-            $tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'dro-one-page-converter'));
+            /* translators: used between list items, there is a space */
+            $tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', 'dro-one-page-converter'));
             if ($tags_list) {
-                /* translators: 1: list of tags. */
-                printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'dro-one-page-converter') . '</span>', $tags_list); // WPCS: XSS OK.
+                
+                printf('<span class="tags-links">%1$s</span>', $tags_list); 
             }
         }
 
@@ -137,5 +139,20 @@ if (!function_exists('dro_one_page_converter_post_thumbnail')) :
             endif; // End is_singular().
         }
 
+
+endif;
+
+if (!function_exists('dro_one_page_converter_posts_pagination')):
+
+    /**
+     * Display Posts pagination Index and Archive pages
+     */
+    function dro_one_page_converter_posts_pagination() {
+
+        the_posts_pagination(array(
+            'prev_text' => '<span><i class="fa fa-arrow-left"></i></span>',
+            'next_text' => '<span><i class="fa fa-arrow-right"></i></span>'
+        ));
+    }
 
 endif;

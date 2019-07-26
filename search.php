@@ -38,7 +38,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			dro_one_page_converter_posts_pagination();
 
 		else :
 
