@@ -155,22 +155,23 @@ function dro_one_page_converter_scripts() {
     /**
      * JS
      */
+    wp_enqueue_script('dro-one-page-converter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180511', true);
+    wp_enqueue_script('dro-one-page-converter-dro-sliding-menu', get_template_directory_uri() . '/js/dro-sliding-menu.js', array('jquery'), '20181211', true);
+    wp_enqueue_script('dro-one-page-converter-js', get_template_directory_uri() . '/js/dro-one-page-converter.js', array('dro-one-page-converter-dro-sliding-menu'), '20181211', true);
+    wp_enqueue_script('dro-one-page-converter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20181211', true);
+    
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
+    
     if (!is_front_page()) {
         wp_enqueue_script('dro-one-page-converter-superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '20181014', true);
         wp_enqueue_script('dro-one-page-converter-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('dro-one-page-converter-superfish'), '20181014', true);
     }
-    if (is_page_template('one-page/tpl-onepage.php')) {
-        wp_enqueue_script('dro-one-page-converter-front-js', get_template_directory_uri() . '/js/dro-one-page-converter-front.js', array('jquery', 'dro-one-page-converter-dro-sliding-menu'), '20181211', true);
-    }
+    //if (is_page_template('one-page/tpl-onepage.php')) {
+      //  wp_enqueue_script('dro-one-page-converter-front-js', get_template_directory_uri() . '/js/dro-one-page-converter-front.js', array('jquery', 'dro-one-page-converter-dro-sliding-menu'), '20181211', true);
+    //}
 
-
-    wp_enqueue_script('dro-one-page-converter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180511', true);
-    wp_enqueue_script('dro-one-page-converter-dro-sliding-menu', get_template_directory_uri() . '/js/dro-sliding-menu.js', array('jquery'), '20181211', true);
-    wp_enqueue_script('dro-one-page-converter-js', get_template_directory_uri() . '/js/dro-one-page-converter.js', array('dro-one-page-converter-dro-sliding-menu'), '20181211', true);
-    wp_enqueue_script('dro-one-page-converter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
 }
 
 add_action('wp_enqueue_scripts', 'dro_one_page_converter_scripts');
@@ -206,7 +207,7 @@ if (defined('JETPACK__VERSION')) {
  * Load the Front Page Class
  */
 function dro_one_page_converter_class_frontpage() {
-    if (is_page_template()) {
+    if (is_page_template('one-page/tpl-onepage.php')) {
         require get_template_directory() . '/inc/class-dro-one-page-converter-frontpage.php';
     }
 }
