@@ -1100,9 +1100,7 @@ p.site-description{
     z-index: 99999;
 }
 
-@media screen and (max-width: 575px){
 
-}
 @media screen and (min-width: 768px ) {
 
     .title-box{
@@ -1119,7 +1117,7 @@ p.site-description{
         top: 0;
         max-width: 150px;
         height: auto;
-        left: 0;
+        left: 10px;
     }
 }
 @media screen and (min-width: 992px){
@@ -1140,6 +1138,7 @@ p.site-description{
         width: 150px;
         height: 150px;
         top:50px;
+        position: absolute;
     }
 }
 
