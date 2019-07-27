@@ -21,10 +21,7 @@
 
     <body <?php body_class(); ?>>
         <div id="page" class="site">
-            <?php
-            $bootstrap_container = (dro_one_page_converter_get_option('dro_one_page_converter_full_width_status')) ? "container-fluid" : "container";
-            ?>
-            <div class="<?php echo $bootstrap_container ?>">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 header-container">
                 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dro-one-page-converter'); ?></a>
@@ -76,7 +73,5 @@
                 </header><!-- #masthead -->
                 </div><!-- .col-12.header-container-->
                 </div><!-- .row -->
-                <div id="content" class="site-content">
-                    <div class="container-fluid">
-                    <div class="row">
+                <div id="content" class="site-content row">
                         
