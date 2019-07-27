@@ -45,20 +45,7 @@ if (!function_exists('dro_one_page_converter_customize_register')) {
             'panel' => 'theme_option_panel')
         );
 
-        // Full width  option
-        $wp_customize->add_setting('dro_one_page_converter_full_width_status', array(
-            'default' => $default['dro_one_page_converter_full_width_status'],
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'dro_one_page_converter_sanitize_checkbox',
-            'transport' => 'postMessage',
-        ));
-        $wp_customize->add_control('dro_one_page_converter_full_width_status', array(
-            'label' => esc_html__('Enable Full Width', 'dro-one-page-converter'),
-            'section' => 'dro_one_page_converter_design_section',
-            'type' => 'checkbox',
-            'priority' => 100
-                )
-        );
+        
 
         // Blog description color
         $wp_customize->add_setting('dro_one_page_converter_blog_description_text_color', array(
@@ -147,10 +134,6 @@ if (!function_exists('dro_one_page_converter_default_theme_options')):
     function dro_one_page_converter_default_theme_options() {
 
         $defaults = array();
-        $defaults['dro_one_page_converter_full_width_status'] = true;
-//        $defaults['dro_one_page_converter_sticky_header_status'] = false;
-//        $defaults['dro_one_page_converter_search_form_status'] = false;
-//        $defaults['dro_one_page_converter_scroll_top_status'] = false;
 
         return $defaults;
     }

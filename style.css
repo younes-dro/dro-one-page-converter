@@ -8,7 +8,7 @@ Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dro-one-page-converter
-Tags: custom-logo, custom-menu, featured-images, one-column, full-width-template, theme-options 
+Tags: custom-logo, custom-menu, featured-images, one-column, full-width-template
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -882,7 +882,7 @@ nav.pagination i{
 .comment-navigation .nav-next a,
 .posts-navigation .nav-next a,
 .post-navigation .nav-next a{
-color: #fdb84e;
+    color: #fdb84e;
     /* background-color: aliceblue; */
     display: block;
     width: 100%;
@@ -924,8 +924,7 @@ color: #fdb84e;
     border-top: 1px solid hsl(200, 4%, 17%);
     /* height: 100px; */
     padding: 20px;
-    width: 100%;
-
+    /* width: 100%;    
 }
 .site-info{
     /* background-color: #ccc; */
@@ -1505,7 +1504,7 @@ ol.children { list-style-type: none; }
 .article-inner-wrapper{
     padding: 30px 30px 0px;
     text-align: center;
-    /*border: 1px solid #9E9E9E;*/
+    border: 1px solid #9E9E9E;
 }
 @media screen and (max-width:992px){
 
