@@ -625,7 +625,26 @@ textarea {
 .search-field{
     max-width: 150px;
 }
-
+@media screen and (max-width: 768px){
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea {
+        max-width: 90%
+    }
+}
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -1173,7 +1192,7 @@ p.site-description{
     padding-bottom: 1em;
     font-size: 16px;
     font-size: 1rem;
-    
+
 }
 
 .widget-title {
@@ -1357,8 +1376,8 @@ body.single-post .post-thumbnail{
     }
     body.single-post .entry-title,
     body.single-post .posted_category,
-     body.single-post .entry-title,
-      body.single-post .entry-meta{
+    body.single-post .entry-title,
+    body.single-post .entry-meta{
         text-align: left;
     }
 }
@@ -1755,15 +1774,15 @@ object {
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+    margin-bottom: 1.5em;
+    max-width: 100%;
 }
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 .wp-caption-text {
-	text-align: center;
+    text-align: center;
 }
 .wp-caption .wp-caption-text {
     padding: 0.8075em 1em;
