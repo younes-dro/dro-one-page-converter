@@ -41,6 +41,22 @@
         }
 
     });
+    /**
+     * Dislay / Hide gallery caption text if it's exists
+     */
+    if ($('figure.gallery-item .gallery-caption')) {
+        $('figure.gallery-item .gallery-caption').css({"display": "none"});
+        var toggleCaption = $('<span/>', {'class': 'toggleCaption',
+            'html': '<i class="fa toggleCaption-plus"></i>'});
+        $('figure.gallery-item').has('.gallery-caption').append(toggleCaption);
+
+       $('figure.gallery-item  .toggleCaption').on('click',function(){
+           $(this).find('i').toggleClass('toggleCaption-minus');
+            $(this).prev('.gallery-caption').slideToggle();
+       });
+    }
+
+
 
 })(jQuery);
 

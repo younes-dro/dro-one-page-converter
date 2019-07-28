@@ -1759,7 +1759,22 @@ object {
 .gallery {
     margin-bottom: 1.5em;
 }
-
+.toggleCaption{
+    background-color: #9e2520;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    margin-top: 10px; 
+    cursor: pointer;
+}
+.toggleCaption-plus:before{
+    content: "\f067";
+}
+.toggleCaption-minus:before{
+    content: "\f068";
+}
 .gallery-item {
     display: inline-block;
     text-align: center;
