@@ -857,6 +857,12 @@ nav.pagination i{
 .post-navigation {
     margin: 0 0 1.5em;
     overflow: hidden;
+    margin: 0 0 1.5em;
+    overflow: hidden;
+    border-top: .5px solid;
+    border-bottom: .5px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;    
 }
 .comment-navigation .nav-previous,
 .post-navigation .nav-previous,
@@ -902,6 +908,20 @@ nav.pagination i{
 .post-navigation .nav-next a:hover{
     background-color: #7ac1b7;
     color: #fff;
+}
+.comment-navigation .nav-previous a:before,
+.posts-navigation .nav-previous a:before,
+.post-navigation .nav-previous a:before{
+    content: "\f060";
+    font-family: fontawesome;
+    margin-right: 1em;
+}
+.comment-navigation .nav-next a:after,
+.posts-navigation .nav-next a:after,
+.post-navigation .nav-next a:after{
+    content: "\f061 ";
+    font-family: fontawesome; 
+    margin-left: 1em;
 }
 @media screen and (min-width: 768px){
     .comment-navigation .nav-previous,
@@ -1525,7 +1545,8 @@ blockquote cite {
 ## Comments
 --------------------------------------------------------------*/
 .comments-title {
-    font-weight: 700;
+    border-bottom: 1px solid;
+    font-size: 1.6rem;
 }
 .comments-area > ol {
     padding: 0;
