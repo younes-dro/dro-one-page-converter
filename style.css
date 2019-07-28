@@ -849,6 +849,9 @@ nav.pagination i{
     }
 }
 /* Posts navigation */
+.nav-links{
+    margin-top: 10px;
+}
 .site-main .comment-navigation, .site-main
 .post-navigation, .site-main
 .post-navigation {
@@ -863,6 +866,7 @@ nav.pagination i{
     float: none;
     background: rgba(158, 37, 32, 1);
     color: #fdb84e;
+    margin-bottom: 10px;
 }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
@@ -870,7 +874,7 @@ nav.pagination i{
     width: 100%;
     text-align: center;
     float: none;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     background: rgba(158, 37, 32, 1);
     color: #fdb84e;
 
@@ -1251,8 +1255,8 @@ p.site-description{
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.entry-header{
-    /*border:1px solid #00F;*/
+body.single-post .post-thumbnail{
+    text-align: center;
 }
 /* Align center the entry header content for Single post */
 .posted_category, 
@@ -1322,6 +1326,22 @@ p.site-description{
         line-height: 1.5em;
     }
 }
+@media screen and (min-width:992px){
+    body.single-post .entry-header{
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        background-color: #f9f9f9;
+        margin-top: -100px;
+        height: min-content;
+    }
+    body.single-post .entry-title,
+    body.single-post .posted_category,
+     body.single-post .entry-title,
+      body.single-post .entry-meta{
+        text-align: left;
+    }
+}
 /* Meta */
 .category-list {
     margin: 1.3em 0 1em;
@@ -1388,20 +1408,40 @@ p.site-description{
 .tags-links .fa{
     /*color: #ccc;*/
 }
-
-.entry-footer .tags-links a {
+.cat-tags-single-post{
+    /* margin-top: 3rem; */
+    margin-bottom: 1rem;
+    font-family: 'Coourgette-Regular', sans-serif;
+    font-size: 16px;
+    font-size: .9rem;
+    line-height: 2em;
+    /*border: 1px solid;*/
+    text-align: center;
+}
+.cat-tags-single-post span.cat-links{
+    height: 40px;
+    width: 99%;
+    display: inline-block;    
+}
+.entry-footer .tags-links a ,
+.cat-tags-single-post .tags-links a{
     margin-left: .4rem;
     border-radius: 50%;
-    background-color: #313131;
-    padding: 4px 8px;
-    color: #fff;
+    background-color: #9e2520;
+    padding: 5px 8px;
+    color: #fdb84e;
     text-decoration: none;
     font-family: FontAwesome;
-    display: inline-block;
+    display: inline-block
 }
 .tags-links a::before{
     margin-right: .1rem;
     content: '\f02b';
+}
+.entry-footer .tags-links a:hover,
+.cat-tags-single-post .tags-links a:hover{
+    background-color: #7ac1b7;
+    color: #fff;    
 }
 .entry-footer a:hover{
     /*background-color: #fff;*/
@@ -1412,11 +1452,25 @@ p.site-description{
 blockquote{
     border-top: 1px solid #bbc0c4;
     border-bottom: 1px solid #bbc0c4;
-    font-style: italic;
+    /*font-style: italic;*/
     padding: 1em 1.5em 0;
     margin-bottom: 1em;
 }
+blockquote em { 
+    font-style: normal; 
+}
 
+blockquote cite {
+    display: block;
+    margin-top: 1em;
+    margin-left: 40%;
+    font-size: 14px;
+    font-size: .8rem;
+    font-family: sans-serif;
+    font-style: normal;
+    line-height: 1.5em;
+    text-align: right;
+}
 .sticky {
     display: block;
 }
@@ -1582,6 +1636,7 @@ ol.children { list-style-type: none; }
     padding: 30px 30px 0px;
     text-align: center;
     border: 1px solid #9E9E9E;
+    width: 100%;
 }
 @media screen and (max-width:992px){
 
@@ -1679,22 +1734,23 @@ object {
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
-    margin-bottom: 1.5em;
-    max-width: 100%;
+	margin-bottom: 1.5em;
+	max-width: 100%;
 }
-
 .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin: 0 auto;
 }
-
-.wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
-}
-
 .wp-caption-text {
-    text-align: center;
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+    padding: 0.8075em 1em;
+    font-size: 14px;
+    font-size: .9rem;
+    font-family: sans-serif;
+    /* background: #e5e5e5; */
+    background: hsla(0, 0%, 90%, 0.2);
 }
 
 /*--------------------------------------------------------------
