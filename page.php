@@ -11,9 +11,16 @@
  *
  * @package dro_one_page_converter
  */
-get_header();
+get_header('no-branding');
 ?>
-<div class="col-12">
+    <?php
+        if(dro_one_page_converter_sidebar_status('sidebar-right')){
+            $col_count = 'col-lg-9';
+        }else{
+            $col_count = 'col-lg-12';
+        }
+    ?>
+<div class="<?php echo $col_count?>">
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
 
@@ -33,12 +40,8 @@ get_header();
 
         </main><!-- #main -->
     </div><!-- #primary -->
-</div>
-<div class="col-12">
-    <?php
-    get_sidebar();
-    ?>
-    <div/>
-    <?php
-    get_footer();
+</div><!-- .$col -->
+<?php
+get_sidebar();
+get_footer();
     
