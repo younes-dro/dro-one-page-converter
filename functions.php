@@ -134,7 +134,9 @@ function dro_one_page_converter_scripts() {
     wp_enqueue_style('dro-one-page-converter-ionicons', get_template_directory_uri() . '/assets/ionicons/css/ionicons.css');
     wp_enqueue_style('dro-one-page-converter-mobile-menu', get_template_directory_uri() . '/layouts/dro-sliding-menu.css');
     wp_enqueue_style('dro-one-page-converter-style', get_stylesheet_uri());
-    wp_enqueue_style('dro-one-page-converter-layoout-style', get_template_directory_uri() . '/layouts/content-sidebar.css');
+    if(is_active_sidebar('sidebar-right')){
+        wp_enqueue_style('dro-one-page-converter-layoout-style', get_template_directory_uri() . '/layouts/content-sidebar.css');
+    }
     if (is_page_template()) {
         wp_enqueue_style('dro-one-page-converter-one-page-css', get_template_directory_uri() . '/layouts/dro-one-page-converter.css');
     }
