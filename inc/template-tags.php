@@ -102,6 +102,29 @@ if (!function_exists('dro_one_page_converter_entry_footer')) :
     }
 
 endif;
+if(!function_exists('dro_one_page_converter_single_entry_footer')){
+    
+    /**
+     * Prints HTML with meta information for the categories, tags for single post.
+     */
+    function dro_one_page_converter_single_entry_footer(){
+            /* translators: used between list items, there is a space after the comma */
+            $categories_list = get_the_category_list(esc_html__(', ', 'dro-one-page-converter'));
+            if ($categories_list) {
+                /* translators: 1: list of categories. */
+                printf(
+                        '<span class="cat-links"><span class="posted-in">' . esc_html__('Posted in : ', 'dro-one-page-converter') . '</span>%1$s</span>', 
+                        $categories_list); // WPCS: XSS OK.
+            }
+
+            /* translators: used between list items, there is a space */
+            $tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', 'dro-one-page-converter'));
+            if ($tags_list) {
+                
+                printf('<span class="tags-links">%1$s</span>', $tags_list); 
+            }        
+    }
+}
 
 if (!function_exists('dro_one_page_converter_post_thumbnail')) :
 

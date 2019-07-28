@@ -41,9 +41,11 @@
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
+            <?php if (!is_single()){?>
             <div class="continue-reading">
                 <?php echo '<a href="' . esc_url(get_permalink()) . '" title="' . esc_attr__('Continue Reading ', 'dro-one-page-converter') . get_the_title() . '" rel="bookmark">Continue Reading<i class="fa fa-arrow-circle-right"></i></a>'; ?>
             </div>
+            <?php } ?>
             <?php dro_one_page_converter_entry_footer(); ?>
         </footer><!-- .entry-footer -->
     </div><!-- .article-inner-wrapper -->

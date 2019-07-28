@@ -161,9 +161,10 @@ function dro_one_page_converter_scripts() {
         wp_enqueue_script('dro-one-page-converter-superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '20181014', true);
         wp_enqueue_script('dro-one-page-converter-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('dro-one-page-converter-superfish'), '20181014', true);
     }
-    //if (is_page_template('one-page/tpl-onepage.php')) {
-      //  wp_enqueue_script('dro-one-page-converter-front-js', get_template_directory_uri() . '/js/dro-one-page-converter-front.js', array('jquery', 'dro-one-page-converter-dro-sliding-menu'), '20181211', true);
-    //}
+    if (is_page_template('one-page/tpl-onepage.php')) {
+        wp_enqueue_script('dro-one-page-converter-front-js', get_template_directory_uri() . '/js/dro-one-page-converter-front.js', array('jquery', 'dro-one-page-converter-dro-sliding-menu'), '20181211', true);
+    }
+    
 
 }
 

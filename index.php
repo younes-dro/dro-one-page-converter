@@ -17,9 +17,9 @@ get_header();
 
     <?php
         if(dro_one_page_converter_sidebar_status('sidebar-right')){
-            $col_count = 'col-md-9';
+            $col_count = 'col-lg-9';
         }else{
-            $col_count = 'col-md-12';
+            $col_count = 'col-lg-12';
         }
     ?>
     <div class="<?php echo $col_count?>">
@@ -61,7 +61,7 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-    </div>
+    </div><!-- .col-->
 <?php get_sidebar(); ?>
      
 <?php

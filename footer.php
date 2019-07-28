@@ -11,7 +11,7 @@
 ?>
 
 
-</div><!-- #content -->
+</div><!-- #content / site-content row -->
 
 <footer id="colophon" class="site-footer row">
     <div class="col-12">
@@ -30,8 +30,7 @@
         </div><!-- .site-info -->
     </div> <!-- .col-12 -->
 </footer><!-- #colophon / .row -->
-</div>
-</div>
+
 </div><!-- .container-fluid or container (full width option )-->
 </div><!-- #page -->
 
