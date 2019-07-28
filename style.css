@@ -1337,7 +1337,8 @@ body.home a.post-thumbnail{
 body.home a.post-thumbnail{
     
 }
-body.single-post .post-thumbnail{
+body.single-post .post-thumbnail,
+body.archive .post-thumbnail{
     text-align: center;
 }
 /* Align center the entry header content for Single post */
@@ -1409,7 +1410,8 @@ body.single-post .post-thumbnail{
     }
 }
 @media screen and (min-width:992px){
-    body.home a.post-thumbnail{
+    body.home a.post-thumbnail,
+    body.archive .post-thumbnail{
         /*border: 1px solid #f00;*/
         /*background-color: blueviolet;*/
         display: block;
