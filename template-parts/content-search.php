@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="article-inner-wrapper">
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
@@ -25,11 +26,21 @@
 
 	<?php dro_one_page_converter_post_thumbnail(); ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php dro_one_page_converter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+        <div class="entry-content">
+            <?php the_excerpt() ?>
+        </div><!-- .entry-content -->
+
+        <footer class="entry-footer">
+            <?php if (!is_single()){?>
+            <div class="continue-reading">
+                <?php echo '<a href="' . esc_url(get_permalink()) . 
+                        '" title="' . esc_attr__('Continue Reading ', 'dro-one-page-converter') . get_the_title() . '" rel="bookmark">'
+                        . esc_html__('Continue Reading','dro-one-page-converter').'<i class="fa fa-arrow-circle-right"></i>'
+                        . '</a>'; ?>
+            </div>
+            <?php } ?>
+            <?php dro_one_page_converter_entry_footer(); ?>
+        </footer><!-- .entry-footer -->
+        </div><!-- .article-inner-wrapper -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -1338,7 +1338,8 @@ body.home a.post-thumbnail{
     
 }
 body.single-post .post-thumbnail,
-body.archive .post-thumbnail{
+body.archive .post-thumbnail,
+body.search .post-thumbnail{
     text-align: center;
 }
 /* Align center the entry header content for Single post */
@@ -1411,7 +1412,8 @@ body.archive .post-thumbnail{
 }
 @media screen and (min-width:992px){
     body.home a.post-thumbnail,
-    body.archive .post-thumbnail{
+    body.archive .post-thumbnail,
+    body.search .post-thumbnail{
         /*border: 1px solid #f00;*/
         /*background-color: blueviolet;*/
         display: block;
@@ -1618,6 +1620,12 @@ blockquote cite {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-link{
+    display: block;
+    font-size: 1rem;
+    font-family: sans-serif;
+    height: 40px;
+}
 .comments-title {
     border-bottom: 1px solid;
     font-size: 1.6rem;
