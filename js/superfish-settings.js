@@ -4,7 +4,7 @@
 
 jQuery(document).ready(function ($) {
     var breakpoint = 992;
-    var sf = $('ul.menu');
+    var sf = $('nav.main-navigation ul.menu');
 
     if ($(document).width() >= breakpoint) {
         sf.superfish({
