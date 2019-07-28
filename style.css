@@ -527,6 +527,11 @@ img {
     max-width: 100%;
     /* Adhere to container width. */
 }
+@media screen and (min-width:768px) and (max-width:991px){
+    img{
+        max-width: 60%;
+    }
+}
 @media screen and (min-width: 992px){
     img{
         max-width: 90%;
@@ -1326,6 +1331,12 @@ p.site-description{
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+body.home a.post-thumbnail{
+    
+}
+body.home a.post-thumbnail{
+    
+}
 body.single-post .post-thumbnail{
     text-align: center;
 }
@@ -1398,6 +1409,17 @@ body.single-post .post-thumbnail{
     }
 }
 @media screen and (min-width:992px){
+    body.home a.post-thumbnail{
+        /*border: 1px solid #f00;*/
+        /*background-color: blueviolet;*/
+        display: block;
+        float: left;
+        max-width: 50%;
+        height: auto;    
+    }
+    .entry-content p{
+        text-align: left;
+    }
     body.single-post .entry-header{
         border-right: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
