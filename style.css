@@ -1099,7 +1099,7 @@ div.col-12.header-container{
     text-align: center;
     margin: 0 auto;
     padding: 6rem 0 0 0;
-    background-color: #fff;
+    background-color: #fafafa;
 
 }
 /* if the header image is displayed as background image */
@@ -1108,7 +1108,7 @@ div.col-12.header-container{
     background-size: cover!important;
     -moz-background-size: cover!important;
     -webkit-background-size: cover!important;
-    height: 90vh;
+    height: 50vh;
     object-fit: cover;
 }
 .header-background-image .title-box{
@@ -1186,6 +1186,9 @@ p.site-description{
     }
 }
 @media screen and (min-width: 992px){
+    .header-background-image{
+        background-attachment: fixed;
+    }
     .site-branding{
         padding: 5rem 0;
     }
