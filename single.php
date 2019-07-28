@@ -7,7 +7,7 @@
  * @package dro_one_page_converter
  */
 
-get_header();
+get_header('no-branding');
 ?>
     <?php
         if(dro_one_page_converter_sidebar_status('sidebar-right')){

@@ -16,6 +16,11 @@
     padding: 70px 0;
     background-color: #fafafa;
 }
+@media screen and (min-width:992px){
+    .site-content{
+        padding-top: 100px;
+    }
+}
 .single-post .site-content{
     
 }

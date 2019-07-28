@@ -527,6 +527,11 @@ img {
     max-width: 100%;
     /* Adhere to container width. */
 }
+@media screen and (min-width: 992px){
+    img{
+        max-width: 90%;
+    }
+}
 
 figure {
     margin: 1em 0;
@@ -872,7 +877,6 @@ nav.pagination i{
     margin-top: 10px;
 }
 .site-main .comment-navigation, .site-main
-.post-navigation, .site-main
 .post-navigation {
     margin: 0 0 1.5em;
     overflow: hidden;
@@ -882,6 +886,11 @@ nav.pagination i{
     border-bottom: .5px solid;
     padding-top: 10px;
     padding-bottom: 10px;    
+}
+@media screen and (min-width:992px){
+    .site-main .post-navigation{
+        margin-top: 1.5em;
+    }
 }
 .comment-navigation .nav-previous,
 .post-navigation .nav-previous,
@@ -1119,7 +1128,17 @@ h1.site-title{
     margin: 0 auto;
     padding: 0;
 }
-
+p.custom-site-title{
+    font-size: 1rem;
+    position: fixed;
+    top: 15px;
+    left: 100px;
+    font-family: courgette;
+    font-weight: normal;
+    z-index: 99999;
+    color: #fff;  
+    transition: all 1s;
+}
 .site-title a{
     color: #9e2520;
 }
@@ -1136,8 +1155,8 @@ p.site-description{
     position: fixed;
     top: 0px;
     left: 10px;
-    height: 80px;
-    width: 80px;
+    height: auto;
+    max-width: 80px;
     transition: all 1s;
     z-index: 99999;
 }
@@ -1154,6 +1173,10 @@ p.site-description{
     }
     p.site-description{
         font-size: 2rem;
+    }
+    p.custom-site-title{
+        left: 200px;
+        top: 20px;        
     }
     .custom-logo-link{
         top: 0;
@@ -1173,14 +1196,20 @@ p.site-description{
     h1.site-title{
         font-size: 3rem;
     }
+    p.custom-site-title{
+        top: 60px;
+        position: absolute;
+        left: 150px;
+    }
     p.site-description{
         font-size: 2.5rem;
     }
     .custom-logo-link{
         width: 150px;
-        height: 150px;
-        top:50px;
+        height: auto;
+        top: 40px;
         position: absolute;
+        z-index: 99;
     }
 }
 
@@ -1371,7 +1400,6 @@ body.single-post .post-thumbnail{
         border-bottom: 1px solid #ccc;
         border-top: 1px solid #ccc;
         background-color: #f9f9f9;
-        margin-top: -100px;
         height: min-content;
     }
     body.single-post .entry-title,

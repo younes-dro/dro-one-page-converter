@@ -35,6 +35,7 @@
                                 ?>
                             </nav><!-- #site-navigation -->
                             <?php the_custom_logo() ?>
+                            <p class="custom-site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
                         </header><!-- #masthead -->
                     </div><!-- .col-12.header-container-->
                 </div><!-- .row -->
