@@ -45,49 +45,6 @@ if (!function_exists('dro_one_page_converter_customize_register')) {
             'panel' => 'theme_option_panel')
         );
 
-        
-
-        // Blog description color
-        $wp_customize->add_setting('dro_one_page_converter_blog_description_text_color', array(
-            'default' => '#000000',
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'postMessage',
-        ));
-        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'dro_one_page_converter_blog_description_text_color', array(
-            'label' => esc_html__('Blog Description Text Color', 'dro-one-page-converter'),
-            'description' => esc_html__('Change the text color for the blog description', 'dro-one-page-converter'),
-            'section' => 'colors',
-            'priority' => 100
-        )));
-
-        // Main Menu color
-        $wp_customize->add_setting('dro_one_page_converter_main_menu_text_color', array(
-            'default' => '#000000',
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'postMessage',
-        ));
-        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'dro_one_page_converter_main_menu_text_color', array(
-            'label' => esc_html__('Main Menu text Color', 'dro-one-page-converter'),
-            'description' => esc_html__('Change the text color for the main menu', 'dro-one-page-converter'),
-            'section' => 'colors',
-            'priority' => 100
-        )));
-        // Background Main Menu color
-        $wp_customize->add_setting('dro_one_page_converter_main_menu_background_color', array(
-            'default' => '#000000',
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'postMessage',
-        ));
-        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'dro_one_page_converter_main_menu_background_color', array(
-            'label' => esc_html__('Main Menu Background Color', 'dro-one-page-converter'),
-            'description' => esc_html__('Change the background color for the main menu', 'dro-one-page-converter'),
-            'section' => 'colors',
-            'priority' => 100
-        )));
-
         /**
          * Design options for onepage style ( TODO);
          */
