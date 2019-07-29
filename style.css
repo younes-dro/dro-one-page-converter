@@ -4,7 +4,7 @@ Theme URI: https://github.com/younes-dro/dro-one-page-converter
 Author: Younes dro
 Author URI: http://dro.123.fr
 Description: Dro One Page Converter gives you the ability to convert your site to a single page theme in three steps: Firstly: create a page (or an existing page) and assign it to the template: "Dro OnePage Converter".  Secondly:  set it as FrontPage (Settings -> reading -> static page ). Thirdly: create a set of pages that you want to display on the home page (or already existing pages) and define them as child pages of the FrontPage.The menu is dynamically built and contains the titles of the child pages. If a child page also contains child pages too, they will be displayed in a responsive column. The content of child pages, is displayed before the Tag Read More
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dro-one-page-converter
@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
         ## Captions
         ## Galleries
+#Print
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -1332,10 +1333,10 @@ p.site-description{
 ## Posts and pages
 --------------------------------------------------------------*/
 body.home a.post-thumbnail{
-    
+
 }
 body.home a.post-thumbnail{
-    
+
 }
 body.single-post .post-thumbnail,
 body.archive .post-thumbnail,
@@ -1919,4 +1920,60 @@ object {
 
 .gallery-caption {
     display: block;
+}
+/*--------------------------------------------------------------
+# Print
+--------------------------------------------------------------*/
+@media print {
+    body {background:white; 
+          font-size:10pt; 
+          margin:0; }
+    div{
+        display: table;
+        /*page-break-inside: avoid;*/
+    }
+    #sidebar { display:none; }
+    #header { height:75px; }
+    #content{ margin-left:0; 
+              float:none; 
+              width:auto; }
+
+    #content a { font-weight:bold; 
+                 color:#000;  }
+    #content{ margin-left:0; 
+              float:none; 
+              width:auto; }
+    #footer{ display:none; }
+    h1, h2, h3, h4, h5, h6 { page-break-after:avoid; 
+                             page-break-inside:avoid; }
+    h3 { margin-left:10px; 
+         margin-bottom:0px; 
+         padding-bottom:0px; }
+    blockquote, table, pre { page-break-inside:avoid; }
+    ul, ol, dl  { page-break-before:avoid; }
+    figure.alignnone img { display: block; 
+                           margin-left: auto; 
+                           margin-right: auto;
+                           page-break-inside:avoid}
+    figure.alignright img { padding: 4px; 
+                            margin: 0 0 2px 7px; 
+                            display: inline;page-break-inside:avoid }
+    figure.alignright img { padding: 4px; 
+                            margin: 0 7px 2px 0; 
+                            display: inline;page-break-inside:avoid }
+
+    img { page-break-inside:avoid; 
+          page-break-after:avoid; }
+    .site-branding{display: none}
+    aside{display: none}
+    .entry-footer .tags-links a,
+    .cat-tags-single-post .tags-links a{
+        background-color: #fff;
+        color: #000;}
+    .comment-respond{display: none}
+    div.reply{display: none}
+    span.comments-link{display: none}
+    div.continue-reading{display: none}
+    nav.post-navigation{display: none}
+    .article-inner-wrapper{border:none}
 }
