@@ -33,8 +33,7 @@ if ($dro_one_page_converter_frontpage->has_child === 0) {
             </div><!-- #primary -->
         </div><!-- .col-12 -->
     </div><!-- .row -->
-</div>
 <?php
-get_footer();
+get_template_part('one-page/footer-onepage');
 
 

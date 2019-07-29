@@ -782,7 +782,7 @@ a:hover, a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
-    color: #313131;
+    color: #fff;
     background: #7ac1b7;
 }
 .main-navigation .current_page_ancestor {

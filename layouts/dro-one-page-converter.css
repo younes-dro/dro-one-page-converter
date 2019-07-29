@@ -224,6 +224,13 @@ body.dro-one-page-converter-one-page .custom-logo-link{
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+@media screen and (min-width: 992px){
+.wp_mm_wrapper, #toggle-menu,
+.body_overlay,
+.body_overlay.enabled, 
+#toggle-menu-container {
+    display: none;
+}
 @media screen and (min-width: 768px){
     #toggle-menu-container {
         width: 100%;
