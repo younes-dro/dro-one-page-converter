@@ -4,7 +4,7 @@ Theme URI: https://github.com/younes-dro/dro-one-page-converter
 Author: Younes dro
 Author URI: http://dro.123.fr
 Description: Dro One Page Converter gives you the ability to convert your site to a single page theme in three steps: Firstly: create a page (or an existing page) and assign it to the template: "Dro OnePage Converter".  Secondly:  set it as FrontPage (Settings -> reading -> static page ). Thirdly: create a set of pages that you want to display on the home page (or already existing pages) and define them as child pages of the FrontPage.The menu is dynamically built and contains the titles of the child pages. If a child page also contains child pages too, they will be displayed in a responsive column. The content of child pages, is displayed before the Tag Read More
-Version: 1.0.4
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dro-one-page-converter
