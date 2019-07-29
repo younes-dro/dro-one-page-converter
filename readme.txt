@@ -53,13 +53,9 @@ Montserrat Font, Copyright 2011 The Montserrat Project Authors
 License : the SIL Open Font License, Version 1.1
 Source : https://github.com/JulietaUla/Montserrat
 
-Header image (assets/images/dro-one-page-converter-header.png) is under Creative Commons CC0 license.
-License : https://stocksnap.io/license
-Soource: https://stocksnap.io/photo/3YELAUQN98
-
-The Logo and The three images in the screenshot, Copyright Younes DRO
+Header image (assets/images/dro-one-page-converter-header.png) is MIT  license, Copyright Younes DRO
 License : MIT
-Source  : https://github.com/younes-dro/dro-illustration/tree/master/dro-one-page-converter 
+Soource: https://github.com/younes-dro/dro-illustration/blob/master/dro-one-page-converter/dro-one-page-converter-header.png
 
 jQuery Superfish Menu Plugin - v1.7.9, Copyright (c) 2016 Joel Birch
 License : MIT
