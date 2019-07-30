@@ -130,9 +130,9 @@ class dro_one_page_converter_frontpage {
         foreach ($pages as $key => $value) {
             $this->menu .='<li>';
             $this->menu .='<a href="#' 
-                    . esc_html($pages[$key]->post_name) 
+                    . esc_attr($pages[$key]->post_name) 
                     . '" title="' .
-                    esc_html($pages[$key]->post_title) . '">' .
+                    esc_attr($pages[$key]->post_title) . '">' .
                     esc_html($pages[$key]->post_title) . '</a>';
             $this->menu .='</li>';
         }
@@ -251,8 +251,8 @@ class dro_one_page_converter_frontpage {
      */
     private function _more_tag_link($id) {
         return '<h2><a class="read-more" '
-                . 'title="' . esc_html('Read More', 'dro-one-page-converter')
-                . '" href="' . get_page_link($id) . '#post-' . $id . '">[...]</a></h2>';
+                . 'title="' . esc_attr('Read More', 'dro-one-page-converter')
+                . '" href="' . esc_url(get_page_link($id)) . '#post-' . $id . '">[...]</a></h2>';
     }
 
     /**
@@ -285,7 +285,7 @@ class dro_one_page_converter_frontpage {
             $out .= '<div class="row">';
             $out .= ''
                     . '<div class="col-12">'
-                    . '<h1 class="entry-title">' . get_the_title() . '</h1>'
+                    . '<h1 class="entry-title">' . the_title_attribute() . '</h1>'
                     . $this->_more_tag_link(get_the_ID())
                     . '</div><!-- .col-12 -->'
                     . '';
