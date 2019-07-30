@@ -64,11 +64,6 @@ if (!function_exists('dro_one_page_converter_setup')) :
             'caption',
         ));
 
-        // Set up the WordPress core custom background feature.
-//		add_theme_support( 'custom-background', apply_filters( 'dro_one_page_converter_custom_background_args', array(
-//			'default-color' => 'ffffff',
-//			'default-image' => '',
-//		) ) );
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
 
@@ -130,8 +125,8 @@ function dro_one_page_converter_scripts() {
     /**
      * CSS
      */
-    wp_enqueue_style('dro-one-page-converter-bootstrap-css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css');
-    wp_enqueue_style('dro-one-page-converter-ionicons', get_template_directory_uri() . '/assets/ionicons/css/ionicons.css');
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css');
+    wp_enqueue_style('ionicons', get_template_directory_uri() . '/assets/ionicons/css/ionicons.css');
     wp_enqueue_style('dro-one-page-converter-mobile-menu', get_template_directory_uri() . '/layouts/dro-sliding-menu.css');
     wp_enqueue_style('dro-one-page-converter-style', get_stylesheet_uri());
     if(is_active_sidebar('sidebar-right')){
@@ -143,7 +138,7 @@ function dro_one_page_converter_scripts() {
     /**
      * Fonts
      */
-    wp_enqueue_style('dro-one-page-converter-fontawesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.css');
+    wp_enqueue_style('fontawesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.css');
 
     /**
      * JS
@@ -158,7 +153,7 @@ function dro_one_page_converter_scripts() {
     }
     
     if (!is_front_page()) {
-        wp_enqueue_script('dro-one-page-converter-superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '20181014', true);
+        wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '20181014', true);
         wp_enqueue_script('dro-one-page-converter-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('dro-one-page-converter-superfish'), '20181014', true);
     }
     if (is_page_template('one-page/tpl-onepage.php')) {
