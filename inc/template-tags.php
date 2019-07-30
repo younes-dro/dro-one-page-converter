@@ -62,8 +62,8 @@ if (!function_exists('dro_one_page_converter_entry_footer')) :
                         $categories_list); // WPCS: XSS OK.
             }
 
-            /* translators: used between list items, there is a space */
-            $tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', 'dro-one-page-converter'));
+
+            $tags_list = get_the_tag_list();
             if ($tags_list) {
                 
                 printf('<span class="tags-links">%1$s</span>', $tags_list); 
@@ -81,7 +81,7 @@ if (!function_exists('dro_one_page_converter_entry_footer')) :
                     'class' => array(),
                 ),
                                     )
-                            ), get_the_title()
+                            ), the_title_attribute()
                     )
             );
             echo '</span>';
@@ -96,7 +96,7 @@ if (!function_exists('dro_one_page_converter_entry_footer')) :
                 'class' => array(),
             ),
                                 )
-                        ), get_the_title()
+                        ), the_title_attribute()
                 ), '<span class="edit-link">', '</span>'
         );
     }
@@ -117,8 +117,8 @@ if(!function_exists('dro_one_page_converter_single_entry_footer')){
                         $categories_list); // WPCS: XSS OK.
             }
 
-            /* translators: used between list items, there is a space */
-            $tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', 'dro-one-page-converter'));
+            
+            $tags_list = get_the_tag_list();
             if ($tags_list) {
                 
                 printf('<span class="tags-links">%1$s</span>', $tags_list); 
@@ -148,7 +148,7 @@ if (!function_exists('dro_one_page_converter_post_thumbnail')) :
 
             <?php else : ?>
 
-            <a class="post-thumbnail" title="<?php the_title() ?>" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+            <a class="post-thumbnail" title="<?php the_title_attribute() ?>" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
             <?php
             the_post_thumbnail('post-thumbnail', array(
                 'alt' => the_title_attribute(array(
