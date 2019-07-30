@@ -17,7 +17,7 @@
             }
             ?>            
             <?php
-                the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+            the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 
             if ('post' === get_post_type()) :
                 ?>
@@ -37,13 +37,15 @@
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
-            <?php if (!is_single()){?>
-            <div class="continue-reading">
-                <?php echo '<a href="' . esc_url(get_permalink()) . 
-                        '" title="' . esc_attr__('Continue Reading ', 'dro-one-page-converter') . get_the_title() . '" rel="bookmark">'
-                        . esc_html__('Continue Reading','dro-one-page-converter').'<i class="fa fa-arrow-circle-right"></i>'
-                        . '</a>'; ?>
-            </div>
+            <?php if (!is_single()) { ?>
+                <div class="continue-reading">
+                    <a href="<?php the_permalink(); ?>" title="<?php
+                    the_title_attribute(array(
+                        'before' => esc_attr__('Continue Reading ', 'dro-one-page-converter')
+                            )
+                    );
+                    ?>" rel="bookmark"><?php esc_html_e('Continue Reading', 'dro-one-page-converter'); ?><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
             <?php } ?>
             <?php dro_one_page_converter_entry_footer(); ?>
         </footer><!-- .entry-footer -->

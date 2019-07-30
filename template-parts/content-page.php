@@ -40,8 +40,7 @@
 								'class' => array(),
 							),
 						)
-					),
-					get_the_title()
+					),the_title_attribute()
 				),
 				'<span class="edit-link">',
 				'</span>'
