@@ -1101,12 +1101,15 @@ div.col-12.header-container{
     display: block;
     margin: 0 auto;
 }
-.site-branding{
+
+.site-branding {
     text-align: center;
     margin: 0 auto;
     padding: 6rem 0 0 0;
     background-color: #fafafa;
-
+}
+.text--no-header-image{
+    padding-bottom: 0;
 }
 /* if the header image is displayed as background image */
 .header-background-image{
@@ -1198,6 +1201,9 @@ p.site-description{
     .site-branding{
         padding: 5rem 0;
     }
+    .text--no-header-image{
+        padding-bottom: 0;
+    }    
     .title-box{
         padding: 1rem 0;
     }

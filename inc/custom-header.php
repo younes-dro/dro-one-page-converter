@@ -19,7 +19,7 @@
 function dro_one_page_converter_custom_header_setup() {
     add_theme_support('custom-header', apply_filters('dro_one_page_converter_custom_header_args', array(
         'default-image' => get_template_directory_uri() . '/assets/images/dro-one-page-converter-header.png',
-        'default-text-color' => '000000',
+        'default-text-color' => '#9e2520',
         'width' => 2000,
         'height' => 1200,
         'flex-height' => false, // desable very large image height
@@ -54,7 +54,7 @@ if (!function_exists('dro_one_page_converter_header_style')) :
 // Has the text been hidden?
         if (!display_header_text()) :
             ?>
-                .site-branding {
+                .title-box {
                     position: absolute;
                     clip: rect(1px, 1px, 1px, 1px);
                 }
