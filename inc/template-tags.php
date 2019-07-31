@@ -81,7 +81,7 @@ if (!function_exists('dro_one_page_converter_entry_footer')) :
                     'class' => array(),
                 ),
                                     )
-                            ), the_title_attribute()
+                            ), the_title_attribute(array('echo'=> FALSE))
                     )
             );
             echo '</span>';
@@ -96,7 +96,7 @@ if (!function_exists('dro_one_page_converter_entry_footer')) :
                 'class' => array(),
             ),
                                 )
-                        ), the_title_attribute()
+                        ), the_title_attribute(array('echo' => FALSE))
                 ), '<span class="edit-link">', '</span>'
         );
     }
@@ -168,7 +168,7 @@ endif;
 if (!function_exists('dro_one_page_converter_posts_pagination')):
 
     /**
-     * Display Posts pagination Index and Archive pages
+     * Display Posts pagination  : Index and Archive pages
      */
     function dro_one_page_converter_posts_pagination() {
 
