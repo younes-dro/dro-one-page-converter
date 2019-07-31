@@ -26,7 +26,7 @@ if ($dro_one_page_converter_frontpage->has_child === 0) {
                         esc_html__('Your Front Page does not have any child pages. Nothing to show !', 'dro-one-page-converter')
                         . '</div>';
                     } else {
-                       echo $dro_one_page_converter_frontpage->content;
+                        echo ( $dro_one_page_converter_frontpage->content);
                     }
                     ?>
                 </main><!-- #main -->
