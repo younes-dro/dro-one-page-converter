@@ -119,6 +119,7 @@ class dro_one_page_converter_frontpage {
     }
 
     /**
+     * Build the menu.
      * 
      * @param array $pages
      * 
@@ -183,7 +184,6 @@ class dro_one_page_converter_frontpage {
              */
 
             $featured_image = '';
-            $trans = '';
             $class_has_not_thumbnail = '';
 
             if (has_post_thumbnail($page->ID)) {
@@ -244,7 +244,7 @@ class dro_one_page_converter_frontpage {
     }
 
     /**
-     * Display the more tag
+     * Display the more tag link.
      * 
      * @param int $id the page ID
      * @return string the more tag link
@@ -257,6 +257,7 @@ class dro_one_page_converter_frontpage {
 
     /**
      * Verfy if a child page has children too
+     * 
      * @param int $id the page ID
      */
     private function _subpage_has_child($id) {
@@ -267,7 +268,8 @@ class dro_one_page_converter_frontpage {
     }
 
     /**
-     *  retreive the content of the subpages  only the first level elements
+     * Retreive the content of the subpages  only the first level elements
+     * 
      * @param int $id
      * @return string the title and the content of the subpages
      */
