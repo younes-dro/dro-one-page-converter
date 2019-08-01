@@ -6,7 +6,6 @@
 
     /* Scroll to specific section on the front page */
     var linksLogo = $('.custom-logo-link');
-    console.log(linksLogo);
     $('a[href*="#"]:not([href="#"])').click(function () {
         $('#toggle-menu').trigger('click');
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
