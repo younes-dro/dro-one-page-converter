@@ -144,7 +144,8 @@ body.dro-one-page-converter-one-page .read-more{
     width: 45px;
     height: 45px;
     margin: 0 auto;
-    background-color: #9e2520;   
+    background-color: #9e2520;  
+    text-decoration: none;
 }
 body.dro-one-page-converter-one-page .read-more:hover{
     color: #fff;
