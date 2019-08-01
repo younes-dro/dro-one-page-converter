@@ -55,7 +55,7 @@ Source : https://github.com/JulietaUla/Montserrat
 
 Header image (assets/images/dro-one-page-converter-header.png) is MIT  license, Copyright Younes DRO
 License : MIT
-Soource: https://github.com/younes-dro/dro-illustration/blob/master/dro-one-page-converter/dro-one-page-converter-header.png
+Source: https://github.com/younes-dro/dro-illustration/blob/master/dro-one-page-converter/dro-one-page-converter-header.png
 
 jQuery Superfish Menu Plugin - v1.7.9, Copyright (c) 2016 Joel Birch
 License : MIT
