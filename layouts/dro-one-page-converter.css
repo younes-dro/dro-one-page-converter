@@ -138,8 +138,17 @@ body.dro-one-page-converter-one-page .child-element img{
     max-width: 200px;
 }
 body.dro-one-page-converter-one-page .read-more{
-    color: #b5b5b5;
-    font-size: 1.5rem;    
+    color: #edad4b;
+    font-size: 1.5rem;
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    background-color: #9e2520;   
+}
+body.dro-one-page-converter-one-page .read-more:hover{
+    color: #fff;
+    background-color: #7ac1b7;
 }
 @media screen and (min-width:768px){
 
