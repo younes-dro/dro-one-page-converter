@@ -133,7 +133,7 @@ class dro_one_page_converter_frontpage {
                     . esc_attr($pages[$key]->post_name) 
                     . '" title="' .
                     esc_attr($pages[$key]->post_title) . '">' .
-                    esc_html($pages[$key]->post_title) . '</a>';
+                    esc_attr($pages[$key]->post_title) . '</a>';
             $this->menu .='</li>';
         }
         $this->menu .="</ul>";
@@ -285,7 +285,7 @@ class dro_one_page_converter_frontpage {
             $out .= '<div class="row">';
             $out .= ''
                     . '<div class="col-12">'
-                    . '<h1 class="entry-title">' . the_title_attribute() . '</h1>'
+                    . '<h1 class="entry-title">' . the_title_attribute(array('echo' => false)) . '</h1>'
                     . $this->_more_tag_link(get_the_ID())
                     . '</div><!-- .col-12 -->'
                     . '';
