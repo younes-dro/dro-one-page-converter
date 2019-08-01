@@ -21,19 +21,43 @@ if ($dro_one_page_converter_frontpage->has_child === 0) {
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
                     <?php
-                    if ($dro_one_page_converter_frontpage->frontpage_content() === false ) {
+                    if ($dro_one_page_converter_frontpage->frontpage_content() === false) {
                         echo '<div class="alert alert-danger">' .
                         esc_html__('Your Front Page does not have any child pages. Nothing to show !', 'dro-one-page-converter')
                         . '</div>';
                     } else {
-                        echo wp_kses_post($dro_one_page_converter_frontpage->content);
+                        $allowed_html = array( 
+                            'section' => array(
+                                'class' => array(),
+                                'id' => array()
+                            ),
+                            'div' => array(
+                                'class' => array(),
+                                'style' => array()
+                            ),
+                            'h1' => array(
+                                'class'=>array()
+                            ),
+                            'img' => array(
+                                'src' => array(),
+                                'class' => array()
+                            ),
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'class' => array()
+                            )
+                            ); 
+                        
+                        echo wp_kses($dro_one_page_converter_frontpage->content, $allowed_html);
                     }
                     ?>
                 </main><!-- #main -->
             </div><!-- #primary -->
         </div><!-- .col-12 -->
     </div><!-- .row -->
-<?php
-get_template_part('one-page/footer-onepage');
+    <?php
+    get_template_part('one-page/footer-onepage');
 
 
+    
