@@ -4,7 +4,7 @@ Theme URI: https://github.com/younes-dro/dro-one-page-converter
 Author: Younes dro
 Author URI: http://dro.123.fr
 Description: Dro One Page Converter gives you the ability to convert your site to a single page theme in three steps: Firstly: create a page (or an existing page) and assign it to the template: "Dro OnePage Converter".  Secondly:  set it as FrontPage (Settings -> reading -> static page ). Thirdly: create a set of pages that you want to display on the home page (or already existing pages) and define them as child pages of the FrontPage.The menu is dynamically built and contains the titles of the child pages. If a child page also contains child pages too, they will be displayed in a responsive column. The content of child pages, is displayed before the Tag Read More
-Version: 1.2.1
+Version: 1.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dro-one-page-converter
@@ -663,7 +663,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-    text-decoration: none;	
+    text-decoration: none;
     color: #000;
     color: hsl(0, 0%, 0%);
 }
@@ -690,9 +690,9 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation.sticky-header{
-    position: fixed; 
-    left: 0; 
-    right: 0; 
+    position: fixed;
+    left: 0;
+    right: 0;
     width: 100%;
     background-color: hsla(0, 0%, 20%, 0.9);
     box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
@@ -703,11 +703,11 @@ a:hover, a:active {
     0% {
         opacity: 0.5;
         transform: translateY(-50%);
-    } 
+    }
     100% {
         opacity: 0.5;
         transform: translateY(0);
-    } 
+    }
 }
 .main-navigation {
     position: relative;
@@ -766,7 +766,7 @@ a:hover, a:active {
     display: block;
     padding: 1em .8em;
     /*font-size: 14px;*/
-    font-size: .8rem; 
+    font-size: .8rem;
     text-decoration: none;
     line-height: 1.3em;
     color: #fdb84e;
@@ -829,7 +829,7 @@ a:hover, a:active {
     width: 50%;
 }
 /*--------------------------------------------------------------
-## Pagination 
+## Pagination
 --------------------------------------------------------------*/
 nav.pagination{
     display: block;
@@ -867,7 +867,7 @@ nav.pagination i{
         line-height: 30px;
         padding: 7px 17px;
         margin-right: 5px;
-    }    
+    }
 }
 @media screen and (max-width:768px){
     .pagination .page-numbers{
@@ -891,7 +891,7 @@ nav.pagination i{
     border-top: .5px solid;
     border-bottom: .5px solid;
     padding-top: 10px;
-    padding-bottom: 10px;    
+    padding-bottom: 10px;
 }
 @media screen and (min-width:992px){
     .site-main .post-navigation{
@@ -901,7 +901,7 @@ nav.pagination i{
 .comment-navigation .nav-previous,
 .post-navigation .nav-previous,
 .post-navigation .nav-previous {
-    width: 100%; 
+    width: 100%;
     text-align: center;
     float: none;
     background: rgba(158, 37, 32, 1);
@@ -954,7 +954,7 @@ nav.pagination i{
 .posts-navigation .nav-next a:after,
 .post-navigation .nav-next a:after{
     content: "\f061 ";
-    font-family: fontawesome; 
+    font-family: fontawesome;
     margin-left: 1em;
 }
 @media screen and (min-width: 768px){
@@ -982,7 +982,7 @@ nav.pagination i{
     border-top: 1px solid hsl(200, 4%, 17%);
     /* height: 100px; */
     padding: 20px;
-    /* width: 100%;    
+    /* width: 100%;
 }
 .site-info{
     /* background-color: #ccc; */
@@ -1145,7 +1145,7 @@ p.custom-site-title{
     font-family: courgette;
     font-weight: normal;
     z-index: 99999;
-    color: #fff;  
+    color: #fff;
     transition: all 1s;
 }
 .site-title a{
@@ -1185,7 +1185,7 @@ p.site-description{
     }
     p.custom-site-title{
         left: 200px;
-        top: 20px;        
+        top: 20px;
     }
     .custom-logo-link{
         top: 0;
@@ -1203,7 +1203,7 @@ p.site-description{
     }
     .text--no-header-image{
         padding-bottom: 0;
-    }    
+    }
     .title-box{
         padding: 1rem 0;
     }
@@ -1243,7 +1243,7 @@ p.site-description{
     margin-bottom: 1em;
     font-size: 24px;
     font-size: 1.4rem;
-    border-bottom: 1px solid #505050;    
+    border-bottom: 1px solid #505050;
 }
 .widget a {
     font-weight: 600;
@@ -1280,7 +1280,7 @@ p.site-description{
     font-family: 'fontawesome';
     font-size: 14px;
     color: rgb(132, 123, 123);
-} 
+}
 
 .widget_recent_entries li,
 .widget_recent_comments li { margin: 0 0 .5em 2.5em; }
@@ -1350,7 +1350,7 @@ body.search .post-thumbnail{
     text-align: center;
 }
 /* Align center the entry header content for Single post */
-.posted_category, 
+.posted_category,
 .entry-title,
 .entry-meta{
     text-align: center;
@@ -1370,8 +1370,8 @@ body.search .post-thumbnail{
 }
 
 .entry-meta a { font-weight: 600; }
-.entry-content a { 
-    text-decoration: underline; 
+.entry-content a {
+    text-decoration: underline;
 }
 
 .entry-content h1,
@@ -1426,7 +1426,7 @@ body.search .post-thumbnail{
         display: block;
         float: left;
         max-width: 50%;
-        height: auto;    
+        height: auto;
     }
     .entry-content p{
         text-align: left;
@@ -1524,7 +1524,7 @@ body.search .post-thumbnail{
 .cat-tags-single-post span.cat-links{
     height: 40px;
     width: 99%;
-    display: inline-block;    
+    display: inline-block;
 }
 .entry-footer .tags-links a ,
 .cat-tags-single-post .tags-links a{
@@ -1544,7 +1544,7 @@ body.search .post-thumbnail{
 .entry-footer .tags-links a:hover,
 .cat-tags-single-post .tags-links a:hover{
     background-color: #7ac1b7;
-    color: #fff;    
+    color: #fff;
 }
 .entry-footer a:hover{
     /*background-color: #fff;*/
@@ -1559,8 +1559,8 @@ blockquote{
     padding: 1em 1.5em 0;
     margin-bottom: 1em;
 }
-blockquote em { 
-    font-style: normal; 
+blockquote em {
+    font-style: normal;
 }
 
 blockquote cite {
@@ -1727,7 +1727,7 @@ ol.children { list-style-type: none; }
 
 .required { color: red; }
 /* Comments responsive */
-@media screen and (max-width:600px) {    
+@media screen and (max-width:600px) {
     .comment-list ol { margin-left: 0; }
     ol.children{margin-left: 0; padding: 0}
 
@@ -1751,7 +1751,7 @@ ol.children { list-style-type: none; }
 @media screen and (max-width:992px){
 
     .post-item .entry-meta span{
-        display: block;   
+        display: block;
     }
 }
 .continue-reading{
@@ -1876,7 +1876,7 @@ object {
     height: 40px;
     display: inline-block;
     line-height: 40px;
-    margin-top: 10px; 
+    margin-top: 10px;
     cursor: pointer;
 }
 .toggleCaption-plus:before{
@@ -1931,8 +1931,8 @@ object {
 # Print
 --------------------------------------------------------------*/
 @media print {
-    body {background:white; 
-          font-size:10pt; 
+    body {background:white;
+          font-size:10pt;
           margin:0; }
     div{
         display: table;
@@ -1940,35 +1940,35 @@ object {
     }
     #sidebar { display:none; }
     #header { height:75px; }
-    #content{ margin-left:0; 
-              float:none; 
+    #content{ margin-left:0;
+              float:none;
               width:auto; }
 
-    #content a { font-weight:bold; 
+    #content a { font-weight:bold;
                  color:#000;  }
-    #content{ margin-left:0; 
-              float:none; 
+    #content{ margin-left:0;
+              float:none;
               width:auto; }
     #footer{ display:none; }
-    h1, h2, h3, h4, h5, h6 { page-break-after:avoid; 
+    h1, h2, h3, h4, h5, h6 { page-break-after:avoid;
                              page-break-inside:avoid; }
-    h3 { margin-left:10px; 
-         margin-bottom:0px; 
+    h3 { margin-left:10px;
+         margin-bottom:0px;
          padding-bottom:0px; }
     blockquote, table, pre { page-break-inside:avoid; }
     ul, ol, dl  { page-break-before:avoid; }
-    figure.alignnone img { display: block; 
-                           margin-left: auto; 
+    figure.alignnone img { display: block;
+                           margin-left: auto;
                            margin-right: auto;
                            page-break-inside:avoid}
-    figure.alignright img { padding: 4px; 
-                            margin: 0 0 2px 7px; 
+    figure.alignright img { padding: 4px;
+                            margin: 0 0 2px 7px;
                             display: inline;page-break-inside:avoid }
-    figure.alignright img { padding: 4px; 
-                            margin: 0 7px 2px 0; 
+    figure.alignright img { padding: 4px;
+                            margin: 0 7px 2px 0;
                             display: inline;page-break-inside:avoid }
 
-    img { page-break-inside:avoid; 
+    img { page-break-inside:avoid;
           page-break-after:avoid; }
     .site-branding{display: none}
     aside{display: none}
