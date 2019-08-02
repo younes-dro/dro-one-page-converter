@@ -295,7 +295,7 @@ class dro_one_page_converter_frontpage {
                 $out .= ''
                         . ''
                         . '<div class="col-12">'
-                        . '<img src="' . get_the_post_thumbnail_url() . '" class="">'
+                        . '<img src="' . esc_url( get_the_post_thumbnail_url() ). '" class="">'
                         . '</div><!-- .col-12 -->'
                         . '';
             }
