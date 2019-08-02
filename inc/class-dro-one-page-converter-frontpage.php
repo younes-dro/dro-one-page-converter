@@ -189,7 +189,7 @@ class dro_one_page_converter_frontpage {
             if (has_post_thumbnail($page->ID)) {
 
                 $featured_image_url = get_the_post_thumbnail_url(($page->ID));
-                $featured_image = ' <img class="featured-image img-fluid" src="' . $featured_image_url . '" />';
+                $featured_image = ' <img class="featured-image img-fluid" src="' . esc_url($featured_image_url) . '" />';
             } else {
                 $class_has_not_thumbnail = 'has-not-thumbnail';
             }
@@ -197,7 +197,7 @@ class dro_one_page_converter_frontpage {
             $trans = '<div class="trans"></div>';
             // If the child page has a children too
             if ($this->_subpage_has_child($page->ID) > 0) {
-                $this->content .= '<section id="' . esc_html($page->post_name) . '" class="element page-has-child" >'
+                $this->content .= '<section id="' . esc_attr($page->post_name) . '" class="element page-has-child" >'
                         .$featured_image
                         . $trans
                         . '<div class="container-fluid">'
@@ -218,7 +218,7 @@ class dro_one_page_converter_frontpage {
                         . '</div><!-- .content-fluid (parent) -->';
                 $this->content .='</section>';
             } else {
-                $this->content .= '<section id="' . esc_html($page->post_name) . '" '
+                $this->content .= '<section id="' . esc_attr($page->post_name) . '" '
                         . 'class="element ' . $class_has_not_thumbnail . '">'
                         .$featured_image
                         . $trans
@@ -252,7 +252,7 @@ class dro_one_page_converter_frontpage {
     private function _more_tag_link($id) {
         return '<h2><a class="read-more" '
                 . 'title="' . esc_attr('Read More', 'dro-one-page-converter')
-                . '" href="' . esc_url(get_page_link($id)) . '#post-' . $id . '">[...]</a></h2>';
+                . '" href="' . esc_url(get_page_link($id) . '#post-' . $id ). '">[...]</a></h2>';
     }
 
     /**
