@@ -10,7 +10,7 @@
      * 
      * 
      */
-    var droCatererMainMenu = $('.main-navigation ul.menu').clone(true, true);
+    var droCatererMainMenu = $('.main-navigation ul:nth-child(1)').clone(true, true);
     $(droCatererMainMenu).droSlidingMenu();
 
     /**
