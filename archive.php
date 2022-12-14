@@ -7,16 +7,16 @@
  * @package dro_one_page_converter
  */
 
-get_header('no-branding');
+get_header( 'no-branding' );
 ?>
-    <?php
-        if(dro_one_page_converter_sidebar_status('sidebar-right')){
-            $col_count = 'col-lg-9';
-        }else{
-            $col_count = 'col-lg-12';
-        }
-    ?>
-    <div class="<?php echo $col_count?>">
+	<?php
+	if ( dro_one_page_converter_sidebar_status( 'sidebar-right' ) ) {
+		$col_count = 'col-lg-9';
+	} else {
+		$col_count = 'col-lg-12';
+	}
+	?>
+	<div class="<?php echo $col_count; ?>">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">

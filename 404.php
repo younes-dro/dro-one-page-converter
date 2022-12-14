@@ -7,16 +7,16 @@
  * @package dro_one_page_converter
  */
 
-get_header('no-branding');
+get_header( 'no-branding' );
 ?>
-    <?php
-        if(dro_one_page_converter_sidebar_status('sidebar-right')){
-            $col_count = 'col-lg-9';
-        }else{
-            $col_count = 'col-lg-12';
-        }
-    ?>
-<div class="<?php echo $col_count?>">
+	<?php
+	if ( dro_one_page_converter_sidebar_status( 'sidebar-right' ) ) {
+		$col_count = 'col-lg-9';
+	} else {
+		$col_count = 'col-lg-12';
+	}
+	?>
+<div class="<?php echo $col_count; ?>">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -38,13 +38,15 @@ get_header('no-branding');
 						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'dro-one-page-converter' ); ?></h2>
 						<ul>
 							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
+							wp_list_categories(
+								array(
+									'orderby'    => 'count',
+									'order'      => 'DESC',
+									'show_count' => 1,
+									'title_li'   => '',
+									'number'     => 10,
+								)
+							);
 							?>
 						</ul>
 					</div><!-- .widget -->
